@@ -1,0 +1,24 @@
+2026-03-30 03:33:42,475 [INFO] ============================================================
+2026-03-30 03:33:42,475 [INFO] Training SAC on Hopper-v4 | Seed 1
+2026-03-30 03:33:42,475 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-30 03:33:42,475 [INFO] Total timesteps: 1000000
+2026-03-30 03:33:42,475 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_1
+2026-03-30 03:33:42,475 [INFO] ============================================================
+2026-03-30 03:33:42,545 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-30 03:33:43,293 [INFO] Starting training...
+2026-03-30 06:46:41,405 [INFO] ============================================================
+2026-03-30 06:46:41,405 [INFO] Training SAC on Hopper-v4 | Seed 1
+2026-03-30 06:46:41,405 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-30 06:46:41,405 [INFO] Total timesteps: 1000000
+2026-03-30 06:46:41,405 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_1
+2026-03-30 06:46:41,405 [INFO] ============================================================
+2026-03-30 06:46:41,475 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-30 06:46:42,230 [INFO] Starting training...
+2026-03-30 06:50:27,592 [INFO] ============================================================
+2026-03-30 06:50:27,592 [INFO] Training SAC on Hopper-v4 | Seed 1
+2026-03-30 06:50:27,592 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-30 06:50:27,592 [INFO] Total timesteps: 1000000
+2026-03-30 06:50:27,592 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_1
+2026-03-30 06:50:27,592 [INFO] ============================================================
+2026-03-30 06:50:27,660 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-30 06:50:30,300 [INFO] Starting training...

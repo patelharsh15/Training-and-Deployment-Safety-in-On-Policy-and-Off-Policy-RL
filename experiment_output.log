@@ -1,17 +1,27 @@
 nohup: ignoring input
-2026-03-29 18:56:10,014 [INFO] Skipping HP search, using defaults for ppo/Hopper-v4
-2026-03-29 18:56:10,014 [INFO] 
+2026-03-30 06:50:25,918 [INFO] Skipping HP search, using defaults for ppo/Hopper-v4
+2026-03-30 06:50:25,918 [INFO] 
 ============================================================
-2026-03-29 18:56:10,014 [INFO] Final Runs: PPO on Hopper-v4
-2026-03-29 18:56:10,014 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
-2026-03-29 18:56:10,014 [INFO] ============================================================
+2026-03-30 06:50:25,918 [INFO] Final Runs: PPO on Hopper-v4
+2026-03-30 06:50:25,918 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-30 06:50:25,918 [INFO] ============================================================
 
-2026-03-29 18:56:10,014 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 19:18:38,701 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 19:37:46,973 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 20:02:56,233 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 20:27:22,597 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 20:49:40,707 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 21:07:41,868 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 21:36:58,829 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
-2026-03-29 22:05:08,630 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 06:50:25,918 [INFO] Skipping ppo/Hopper-v4 seed 0 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 1 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 2 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 3 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 4 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 5 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 6 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 7 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 8 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping ppo/Hopper-v4 seed 9 (already done)
+2026-03-30 06:50:25,919 [INFO] Skipping HP search, using defaults for sac/Hopper-v4
+2026-03-30 06:50:25,919 [INFO] 
+============================================================
+2026-03-30 06:50:25,919 [INFO] Final Runs: SAC on Hopper-v4
+2026-03-30 06:50:25,919 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-30 06:50:25,919 [INFO] ============================================================
+
+2026-03-30 06:50:25,919 [INFO] Skipping sac/Hopper-v4 seed 0 (already done)
+2026-03-30 06:50:25,919 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

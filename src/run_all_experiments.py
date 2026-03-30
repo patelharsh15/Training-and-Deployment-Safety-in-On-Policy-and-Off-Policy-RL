@@ -142,6 +142,11 @@ def run_final_experiments(env_name: str, algo: str,
     logging.info(f"{'='*60}\n")
 
     for seed in range(N_SEEDS):
+        result_dir = get_result_dir(env_name, algo, seed, "best")
+        if os.path.exists(os.path.join(result_dir, "final_model.zip")):
+            logging.info(f"Skipping {algo}/{env_name} seed {seed} (already done)")
+            continue
+
         run_training_cmd(
             env_name, algo, seed,
             lr, gamma, bs,

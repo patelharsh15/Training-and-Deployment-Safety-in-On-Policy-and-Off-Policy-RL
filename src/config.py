@@ -71,7 +71,7 @@ ENVIRONMENTS = {
         eval_freq=10_000,
         n_eval_episodes=20,
         n_envs_ppo=8,
-        n_envs_sac=1,
+        n_envs_sac=8,
     ),
     "HalfCheetah-v4": EnvConfig(
         name="HalfCheetah-v4",
@@ -80,7 +80,7 @@ ENVIRONMENTS = {
         eval_freq=10_000,
         n_eval_episodes=20,
         n_envs_ppo=8,
-        n_envs_sac=1,
+        n_envs_sac=8,
     ),
     "SafetyPointGoal1-v0": EnvConfig(
         name="SafetyPointGoal1-v0",
@@ -89,7 +89,7 @@ ENVIRONMENTS = {
         eval_freq=10_000,
         n_eval_episodes=20,
         n_envs_ppo=8,
-        n_envs_sac=1,
+        n_envs_sac=8,
     ),
 }
 

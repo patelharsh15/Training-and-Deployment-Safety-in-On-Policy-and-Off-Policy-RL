@@ -92,8 +92,8 @@ def train_safety(env_name: str, algo: str, seed: int,
             buffer_size=1_000_000,
             learning_starts=10_000,
             tau=0.005,
-            train_freq=1,
-            gradient_steps=1,
+            train_freq=64,
+            gradient_steps=64,
         )
     else:
         raise ValueError(f"Unknown algorithm: {algo}")

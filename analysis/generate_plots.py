@@ -348,9 +348,9 @@ def plot_seed_variance(env_name: str, save_dir: str):
     plt.close()
 
 
-# ── Plot 7: Policy Entropy Evolution ─────────────────────────────────────────
-def plot_entropy_evolution(env_name: str, save_dir: str):
-    """Plot entropy of policy distribution during training."""
+# ── Plot 7: Gradient Norm Evolution (By Update Step) ─────────────────────────
+def plot_gradient_norms_update_steps(env_name: str, save_dir: str):
+    """Plot gradient norms by update step (highlights algorithmic update frequency differences)."""
     fig, ax = plt.subplots(figsize=(10, 6))
 
     for algo in ["ppo", "sac"]:
@@ -378,10 +378,55 @@ def plot_entropy_evolution(env_name: str, save_dir: str):
 
     ax.set_xlabel("Update Step")
     ax.set_ylabel("Gradient Norm")
-    ax.set_title(f"Gradient Norm Evolution on {env_name}")
-    ax.legend()
+    ax.set_title(f"Gradient Norm Evolution (By Update Step) on {env_name}")
+    ax.legend(loc="upper right")
     plt.tight_layout()
-    plt.savefig(os.path.join(save_dir, f"gradient_norms_{env_name.lower().replace('-','_')}.png"))
+    plt.savefig(os.path.join(save_dir, f"gradient_norms_updates_{env_name.lower().replace('-','_')}.png"))
+    plt.close()
+
+
+# ── Plot 7b: Gradient Norm Evolution (By Environment Step) ───────────────────
+def plot_gradient_norms_env_steps(env_name: str, save_dir: str):
+    """Plot gradient norms mathematically scaled to real Environment Steps."""
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    for algo in ["ppo", "sac"]:
+        for seed in range(N_SEEDS):
+            metrics = load_training_metrics(env_name, algo, seed)
+            if metrics and "gradient_norms" in metrics:
+                gn = metrics["gradient_norms"]
+                if gn:
+                    smoothed = smooth(np.array(gn), window=5)
+                    # Align to environment steps
+                    start_step = 10000 if algo == "sac" else 0
+                    x_axis = np.linspace(start_step, 1000000, len(smoothed))
+                    ax.plot(x_axis, smoothed, color=COLORS[algo], alpha=0.2, linewidth=0.8)
+
+        # Plot mean
+        all_gn = []
+        for seed in range(N_SEEDS):
+            metrics = load_training_metrics(env_name, algo, seed)
+            if metrics and metrics.get("gradient_norms"):
+                all_gn.append(metrics["gradient_norms"])
+
+        if all_gn:
+            min_len = min(len(g) for g in all_gn)
+            gn_arr = np.array([g[:min_len] for g in all_gn])
+            mean_gn = gn_arr.mean(axis=0)
+            smoothed = smooth(mean_gn, window=5)
+            
+            start_step = 10000 if algo == "sac" else 0
+            x_axis = np.linspace(start_step, 1000000, len(smoothed))
+            
+            ax.plot(x_axis, smoothed, color=COLORS[algo], linewidth=2.5, label=f"{LABELS[algo]}")
+
+    ax.set_xlabel("Environment Steps")
+    ax.set_ylabel("Gradient Norm")
+    ax.set_title(f"Gradient Norm Evolution (By Env Step) on {env_name}")
+    ax.legend(loc="upper right")
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x/1e6:.2f}M"))
+    plt.tight_layout()
+    plt.savefig(os.path.join(save_dir, f"gradient_norms_envsteps_{env_name.lower().replace('-','_')}.png"))
     plt.close()
 
 
@@ -484,7 +529,8 @@ def generate_all_plots():
         plot_learning_curves(env_name, PLOTS_DIR)
         plot_action_smoothness(env_name, PLOTS_DIR)
         plot_seed_variance(env_name, PLOTS_DIR)
-        plot_entropy_evolution(env_name, PLOTS_DIR)
+        plot_gradient_norms_update_steps(env_name, PLOTS_DIR)
+        plot_gradient_norms_env_steps(env_name, PLOTS_DIR)
 
         if ENVIRONMENTS[env_name].category == "safety":
             plot_constraint_violations(env_name, PLOTS_DIR)

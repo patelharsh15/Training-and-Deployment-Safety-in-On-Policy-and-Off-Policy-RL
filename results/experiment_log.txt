@@ -100,3 +100,5 @@
 2026-03-30 14:42:38,439 [INFO] ============================================================
 
 2026-03-30 14:42:38,439 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 15:14:04,198 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 15:46:02,081 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

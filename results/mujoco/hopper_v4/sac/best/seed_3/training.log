@@ -6,3 +6,5 @@
 2026-03-30 08:54:07,255 [INFO] ============================================================
 2026-03-30 08:54:07,307 [INFO] Using GPU: NVIDIA GeForce RTX 3070
 2026-03-30 08:54:09,981 [INFO] Starting training...
+2026-03-30 09:56:33,026 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_3/logs/training_metrics.json
+2026-03-30 09:56:33,043 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_3

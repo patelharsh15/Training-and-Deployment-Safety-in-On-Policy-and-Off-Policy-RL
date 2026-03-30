@@ -116,12 +116,17 @@ def plot_learning_curves(env_name: str, save_dir: str):
 
         # Plot bold mean curve
         if all_returns:
-            # Interpolate to common x-axis
-            min_len = min(len(r) for r in all_returns)
-            common_returns = np.array([r[:min_len] for r in all_returns])
-            common_ts = all_timesteps[0][:min_len]
-            mean_curve = common_returns.mean(axis=0)
-            se_curve = common_returns.std(axis=0) / np.sqrt(len(all_returns))
+            # Create uniform grid for robust interpolation
+            max_ts = max(np.max(ts) for ts in all_timesteps)
+            common_ts = np.linspace(0, max_ts, 200)
+            
+            interp_returns = []
+            for ts, rets in zip(all_timesteps, all_returns):
+                interp_returns.append(np.interp(common_ts, ts, rets))
+            
+            interp_returns = np.array(interp_returns)
+            mean_curve = interp_returns.mean(axis=0)
+            se_curve = interp_returns.std(axis=0) / np.sqrt(len(all_returns))
 
             ax.plot(common_ts, mean_curve,
                     color=COLORS[algo], linewidth=2.5, label=LABELS[algo])

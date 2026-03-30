@@ -51,18 +51,42 @@ Instead of just looking at who got the highest score, we custom-built "Safety Me
 
 ---
 
+## 🖥️ Installation (Replicating the Environment)
+
+This project strictly uses a native Python 3.10 virtual environment to avoid `conda` bloat and background process deadlocks. Do **not** commit the `venv` folder to GitHub. 
+
+To replicate the exact environment on a new machine:
+
+```bash
+# 1. Ensure Python 3.10 and venv are installed (Ubuntu)
+sudo apt update
+sudo apt install python3.10 python3.10-venv
+
+# 2. Create the virtual environment
+python3.10 -m venv venv
+
+# 3. Activate the environment
+source venv/bin/activate
+
+# 4. Upgrade pip and install exact pinned dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
 ## 🚀 Quick Start Guide
 
 Want to run these massive experiments yourself? 
 
 ```bash
-# 1. Activate the Python environment
+# 1. Activate the Python environment (if not already active)
 source venv/bin/activate
 
 # 2. Run a 10-second Smoke Test to verify GPU access
 CUDA_VISIBLE_DEVICES=1 python src/train_mujoco.py --env Hopper-v4 --algo ppo --seed 0 --total-timesteps 10000
 
-# 3. Run the FULL 60-Seed Master Pipeline (Takes ~3 Days on RTX 3070)
+# 3. Run the FULL 60-Seed Master Pipeline
 # This will automatically train PPO and SAC across all 3 environments, 10 times each!
 CUDA_VISIBLE_DEVICES=1 python src/run_all_experiments.py --skip-hp
 

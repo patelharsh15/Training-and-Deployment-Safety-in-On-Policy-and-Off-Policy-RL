@@ -1,0 +1,19 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Reinforcement Learning / ML Weights
+*.pt
+*.pth
+*.h5
+*.onnx
+
+# Data and Videos
+*.csv
+*.mp4
+*.avi

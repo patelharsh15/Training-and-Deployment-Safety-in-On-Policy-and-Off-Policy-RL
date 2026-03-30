@@ -1,0 +1,10 @@
+2026-03-29 20:27:24,225 [INFO] ============================================================
+2026-03-29 20:27:24,225 [INFO] Training PPO on Hopper-v4 | Seed 4
+2026-03-29 20:27:24,226 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-29 20:27:24,226 [INFO] Total timesteps: 1000000
+2026-03-29 20:27:24,226 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/ppo/best/seed_4
+2026-03-29 20:27:24,226 [INFO] ============================================================
+2026-03-29 20:27:24,279 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-29 20:27:26,945 [INFO] Starting training...
+2026-03-29 20:49:39,962 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/ppo/best/seed_4/logs/training_metrics.json
+2026-03-29 20:49:39,974 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/ppo/best/seed_4

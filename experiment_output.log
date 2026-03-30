@@ -31,3 +31,13 @@ nohup: ignoring input
 2026-03-30 10:45:49,943 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 11:35:19,082 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 12:19:00,176 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 13:04:53,379 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 13:54:39,028 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 14:42:38,433 [INFO] Skipping HP search, using defaults for ppo/HalfCheetah-v4
+2026-03-30 14:42:38,437 [INFO] 
+============================================================
+2026-03-30 14:42:38,437 [INFO] Final Runs: PPO on HalfCheetah-v4
+2026-03-30 14:42:38,438 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-30 14:42:38,439 [INFO] ============================================================
+
+2026-03-30 14:42:38,439 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

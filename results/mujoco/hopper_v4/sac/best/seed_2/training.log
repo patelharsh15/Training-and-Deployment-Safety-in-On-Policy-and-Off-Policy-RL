@@ -1,0 +1,10 @@
+2026-03-30 07:52:08,240 [INFO] ============================================================
+2026-03-30 07:52:08,240 [INFO] Training SAC on Hopper-v4 | Seed 2
+2026-03-30 07:52:08,240 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-30 07:52:08,240 [INFO] Total timesteps: 1000000
+2026-03-30 07:52:08,240 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_2
+2026-03-30 07:52:08,240 [INFO] ============================================================
+2026-03-30 07:52:08,293 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-30 07:52:10,913 [INFO] Starting training...
+2026-03-30 08:54:04,932 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_2/logs/training_metrics.json
+2026-03-30 08:54:04,948 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/hopper_v4/sac/best/seed_2

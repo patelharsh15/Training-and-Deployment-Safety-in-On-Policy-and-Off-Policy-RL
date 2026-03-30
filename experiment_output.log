@@ -25,3 +25,5 @@ nohup: ignoring input
 
 2026-03-30 06:50:25,919 [INFO] Skipping sac/Hopper-v4 seed 0 (already done)
 2026-03-30 06:50:25,919 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 07:52:06,648 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 08:54:05,671 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env Hopper-v4 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

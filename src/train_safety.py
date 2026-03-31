@@ -51,9 +51,8 @@ def train_safety(env_name: str, algo: str, seed: int,
     set_seed(seed)
 
     # Safety-Gymnasium environments
-    # NOTE: Safety-Gym envs may not support SubprocVecEnv easily,
-    # so we use DummyVecEnv for safety envs
-    n_envs = 1  # Safety envs are more stable with single env
+    # We are unleashing 8-core parallel SubprocVecEnv processing to massively speed up data collection
+    n_envs = 8
     train_env = make_vec_env(env_name, n_envs, seed,
                             log_dir=log_dir, is_safety=True)
     eval_env = make_vec_env(env_name, 1, seed + 1000,

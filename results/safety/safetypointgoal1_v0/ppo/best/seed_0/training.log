@@ -1,8 +1,8 @@
-2026-03-31 08:12:59,501 [INFO] ============================================================
-2026-03-31 08:12:59,501 [INFO] Training PPO on SafetyPointGoal1-v0 (Safety) | Seed 0
-2026-03-31 08:12:59,501 [INFO] LR=0.0003, γ=0.99, BS=256
-2026-03-31 08:12:59,501 [INFO] Total timesteps: 1000000
-2026-03-31 08:12:59,501 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_0
-2026-03-31 08:12:59,501 [INFO] ============================================================
-2026-03-31 08:12:59,554 [INFO] Using GPU: NVIDIA GeForce RTX 3070
-2026-03-31 08:13:04,187 [INFO] Starting training...
+2026-03-31 10:35:51,092 [INFO] ============================================================
+2026-03-31 10:35:51,092 [INFO] Training PPO on SafetyPointGoal1-v0 (Safety) | Seed 0
+2026-03-31 10:35:51,092 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-31 10:35:51,092 [INFO] Total timesteps: 1000000
+2026-03-31 10:35:51,092 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_0
+2026-03-31 10:35:51,092 [INFO] ============================================================
+2026-03-31 10:35:51,161 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-31 10:35:58,191 [INFO] Starting training...

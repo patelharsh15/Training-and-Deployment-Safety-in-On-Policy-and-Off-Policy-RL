@@ -11,6 +11,18 @@ from typing import Optional, Dict, List, Any
 import numpy as np
 import torch
 import gymnasium as gym
+
+class SafetyToGymWrapper(gym.Wrapper):
+    """
+    Converts safety-gymnasium's native 6-value step() to standard gym 5-value step().
+    Stable-Baselines3 crashes if step() returns 6 values. We safely pack the custom
+    `cost` value into the `info` dictionary where our custom metrics tracker can find it.
+    """
+    def step(self, action):
+        obs, reward, cost, terminated, truncated, info = self.env.step(action)
+        info['cost'] = cost
+        return obs, reward, terminated, truncated, info
+
 from stable_baselines3.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
@@ -21,7 +33,7 @@ def setup_gpu(preferred_gpu: int = 1) -> torch.device:
     if torch.cuda.is_available():
         n_gpus = torch.cuda.device_count()
         if preferred_gpu < n_gpus:
-            device = torch.device(f"cuda:{0}")  # After CUDA_VISIBLE_DEVICES, it's index 0
+            device = torch.device(f"cuda:{preferred_gpu}")
         else:
             device = torch.device("cuda:0")
         logging.info(f"Using GPU: {torch.cuda.get_device_name(device)}")
@@ -64,6 +76,7 @@ def make_env(env_name: str, seed: int, rank: int = 0,
         if is_safety:
             import safety_gymnasium
             env = safety_gymnasium.make(env_name)
+            env = SafetyToGymWrapper(env)
         else:
             env = gym.make(env_name)
         env.reset(seed=seed + rank)

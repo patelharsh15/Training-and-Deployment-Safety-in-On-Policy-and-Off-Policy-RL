@@ -1,0 +1,77 @@
+nohup: ignoring input
+2026-03-31 10:35:49,410 [INFO] Skipping HP search, using defaults for ppo/Hopper-v4
+2026-03-31 10:35:49,410 [INFO] 
+============================================================
+2026-03-31 10:35:49,410 [INFO] Final Runs: PPO on Hopper-v4
+2026-03-31 10:35:49,410 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 10:35:49,410 [INFO] ============================================================
+
+2026-03-31 10:35:49,410 [INFO] Skipping ppo/Hopper-v4 seed 0 (already done)
+2026-03-31 10:35:49,410 [INFO] Skipping ppo/Hopper-v4 seed 1 (already done)
+2026-03-31 10:35:49,410 [INFO] Skipping ppo/Hopper-v4 seed 2 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 3 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 4 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 5 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 6 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 7 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 8 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/Hopper-v4 seed 9 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping HP search, using defaults for sac/Hopper-v4
+2026-03-31 10:35:49,411 [INFO] 
+============================================================
+2026-03-31 10:35:49,411 [INFO] Final Runs: SAC on Hopper-v4
+2026-03-31 10:35:49,411 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 10:35:49,411 [INFO] ============================================================
+
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 0 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 1 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 2 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 3 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 4 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 5 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 6 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 7 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 8 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping sac/Hopper-v4 seed 9 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping HP search, using defaults for ppo/HalfCheetah-v4
+2026-03-31 10:35:49,411 [INFO] 
+============================================================
+2026-03-31 10:35:49,411 [INFO] Final Runs: PPO on HalfCheetah-v4
+2026-03-31 10:35:49,411 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 10:35:49,411 [INFO] ============================================================
+
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/HalfCheetah-v4 seed 0 (already done)
+2026-03-31 10:35:49,411 [INFO] Skipping ppo/HalfCheetah-v4 seed 1 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 2 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 3 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 4 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 5 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 6 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 7 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 8 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping ppo/HalfCheetah-v4 seed 9 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping HP search, using defaults for sac/HalfCheetah-v4
+2026-03-31 10:35:49,412 [INFO] 
+============================================================
+2026-03-31 10:35:49,412 [INFO] Final Runs: SAC on HalfCheetah-v4
+2026-03-31 10:35:49,412 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 10:35:49,412 [INFO] ============================================================
+
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 0 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 1 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 2 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 3 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 4 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 5 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 6 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 7 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 8 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping sac/HalfCheetah-v4 seed 9 (already done)
+2026-03-31 10:35:49,412 [INFO] Skipping HP search, using defaults for ppo/SafetyPointGoal1-v0
+2026-03-31 10:35:49,412 [INFO] 
+============================================================
+2026-03-31 10:35:49,412 [INFO] Final Runs: PPO on SafetyPointGoal1-v0
+2026-03-31 10:35:49,412 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 10:35:49,412 [INFO] ============================================================
+
+2026-03-31 10:35:49,413 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

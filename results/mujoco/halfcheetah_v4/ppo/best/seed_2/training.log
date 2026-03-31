@@ -6,3 +6,5 @@
 2026-03-30 15:46:03,791 [INFO] ============================================================
 2026-03-30 15:46:03,844 [INFO] Using GPU: NVIDIA GeForce RTX 3070
 2026-03-30 15:46:06,513 [INFO] Starting training...
+2026-03-30 16:18:34,099 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_2/logs/training_metrics.json
+2026-03-30 16:18:34,119 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_2

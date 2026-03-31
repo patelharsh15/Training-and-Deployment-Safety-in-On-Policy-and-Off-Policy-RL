@@ -102,3 +102,186 @@
 2026-03-30 14:42:38,439 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 15:14:04,198 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 15:46:02,081 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 16:18:34,864 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 16:50:34,967 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 17:22:50,500 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 17:54:27,845 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 18:26:13,812 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 18:57:57,621 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 19:29:53,524 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 20:01:43,443 [INFO] Skipping HP search, using defaults for sac/HalfCheetah-v4
+2026-03-30 20:01:43,443 [INFO] 
+============================================================
+2026-03-30 20:01:43,443 [INFO] Final Runs: SAC on HalfCheetah-v4
+2026-03-30 20:01:43,443 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-30 20:01:43,443 [INFO] ============================================================
+
+2026-03-30 20:01:43,443 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 21:14:26,531 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 22:27:33,523 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 23:41:38,183 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 00:54:53,565 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 02:08:37,359 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 03:21:05,135 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 04:33:41,399 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 05:46:03,546 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 06:59:33,988 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:12:57,901 [INFO] Skipping HP search, using defaults for ppo/SafetyPointGoal1-v0
+2026-03-31 08:12:57,901 [INFO] 
+============================================================
+2026-03-31 08:12:57,901 [INFO] Final Runs: PPO on SafetyPointGoal1-v0
+2026-03-31 08:12:57,901 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 08:12:57,901 [INFO] ============================================================
+
+2026-03-31 08:12:57,902 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:05,925 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:05,926 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:13,808 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:13,809 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:21,643 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:21,643 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:29,497 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:29,497 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:37,340 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:37,341 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:45,229 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:45,230 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:53,118 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:53,118 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:00,987 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:00,987 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:08,874 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:08,874 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:16,754 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:16,754 [INFO] Skipping HP search, using defaults for sac/SafetyPointGoal1-v0
+2026-03-31 08:14:16,754 [INFO] 
+============================================================
+2026-03-31 08:14:16,754 [INFO] Final Runs: SAC on SafetyPointGoal1-v0
+2026-03-31 08:14:16,754 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 08:14:16,754 [INFO] ============================================================
+
+2026-03-31 08:14:16,755 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:24,529 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:24,529 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:32,312 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:32,312 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:40,079 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:40,079 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:47,858 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:47,858 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:55,601 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:55,601 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:03,350 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:03,350 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:11,120 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:11,121 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:18,903 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:18,903 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:26,657 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:26,657 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:34,423 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:34,424 [INFO] 
+============================================================
+2026-03-31 08:15:34,424 [INFO] All experiments complete!
+2026-03-31 08:15:34,424 [INFO] ============================================================
+2026-03-31 08:15:34,424 [INFO] Starting evaluation of all models...

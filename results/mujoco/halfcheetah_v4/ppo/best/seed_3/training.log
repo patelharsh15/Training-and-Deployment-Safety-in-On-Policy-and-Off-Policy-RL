@@ -1,0 +1,10 @@
+2026-03-30 16:18:36,467 [INFO] ============================================================
+2026-03-30 16:18:36,467 [INFO] Training PPO on HalfCheetah-v4 | Seed 3
+2026-03-30 16:18:36,467 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-30 16:18:36,467 [INFO] Total timesteps: 1000000
+2026-03-30 16:18:36,467 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3
+2026-03-30 16:18:36,467 [INFO] ============================================================
+2026-03-30 16:18:36,536 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-30 16:18:39,201 [INFO] Starting training...
+2026-03-30 16:50:34,215 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3/logs/training_metrics.json
+2026-03-30 16:50:34,226 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3

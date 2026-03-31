@@ -43,3 +43,361 @@ nohup: ignoring input
 2026-03-30 14:42:38,439 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 15:14:04,198 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-30 15:46:02,081 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 16:18:34,864 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 16:50:34,967 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 17:22:50,500 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 17:54:27,845 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 18:26:13,812 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 18:57:57,621 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 19:29:53,524 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo ppo --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 20:01:43,443 [INFO] Skipping HP search, using defaults for sac/HalfCheetah-v4
+2026-03-30 20:01:43,443 [INFO] 
+============================================================
+2026-03-30 20:01:43,443 [INFO] Final Runs: SAC on HalfCheetah-v4
+2026-03-30 20:01:43,443 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-30 20:01:43,443 [INFO] ============================================================
+
+2026-03-30 20:01:43,443 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 21:14:26,531 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 22:27:33,523 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-30 23:41:38,183 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 00:54:53,565 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 02:08:37,359 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 03:21:05,135 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 04:33:41,399 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 05:46:03,546 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 06:59:33,988 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_mujoco.py --env HalfCheetah-v4 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:12:57,901 [INFO] Skipping HP search, using defaults for ppo/SafetyPointGoal1-v0
+2026-03-31 08:12:57,901 [INFO] 
+============================================================
+2026-03-31 08:12:57,901 [INFO] Final Runs: PPO on SafetyPointGoal1-v0
+2026-03-31 08:12:57,901 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 08:12:57,901 [INFO] ============================================================
+
+2026-03-31 08:12:57,902 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:05,925 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:05,926 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:13,808 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:13,809 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:21,643 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:21,643 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:29,497 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:29,497 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:37,340 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:37,341 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:45,229 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:45,230 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:13:53,118 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:13:53,118 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:00,987 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:00,987 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:08,874 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:08,874 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:16,754 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:16,754 [INFO] Skipping HP search, using defaults for sac/SafetyPointGoal1-v0
+2026-03-31 08:14:16,754 [INFO] 
+============================================================
+2026-03-31 08:14:16,754 [INFO] Final Runs: SAC on SafetyPointGoal1-v0
+2026-03-31 08:14:16,754 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-03-31 08:14:16,754 [INFO] ============================================================
+
+2026-03-31 08:14:16,755 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:24,529 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:24,529 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:32,312 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:32,312 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:40,079 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:40,079 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:47,858 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:47,858 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:14:55,601 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:14:55,601 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:03,350 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:03,350 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:11,120 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:11,121 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:18,903 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:18,903 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:26,657 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:26,657 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 08:15:34,423 [ERROR] Training failed: /rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/vec_env/dummy_vec_env.py", line 58, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(
+  File "/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+ValueError: too many values to unpack (expected 5)
+
+2026-03-31 08:15:34,424 [INFO] 
+============================================================
+2026-03-31 08:15:34,424 [INFO] All experiments complete!
+2026-03-31 08:15:34,424 [INFO] ============================================================
+2026-03-31 08:15:34,424 [INFO] Starting evaluation of all models...
+2026-03-31 08:15:34,665 [INFO] 
+============================================================
+Random baseline: Hopper-v4
+============================================================
+2026-03-31 08:15:35,661 [INFO] Random baseline on Hopper-v4: Return=18.82
+2026-03-31 08:15:35,671 [INFO] Evaluating PPO on Hopper-v4 | Seed 0 | Tag: best
+2026-03-31 08:15:53,821 [INFO]   Return: 165.59 ± 5.98
+2026-03-31 08:15:53,821 [INFO]   Smoothness: 0.0000
+2026-03-31 08:15:53,821 [INFO]   Recovery: 0.8925
+2026-03-31 08:15:53,822 [INFO] Evaluating PPO on Hopper-v4 | Seed 1 | Tag: best
+2026-03-31 08:16:39,991 [INFO]   Return: 2100.40 ± 22.99
+2026-03-31 08:16:39,991 [INFO]   Smoothness: 0.1072
+2026-03-31 08:16:39,991 [INFO]   Recovery: 2.1938
+2026-03-31 08:16:39,991 [INFO] Evaluating PPO on Hopper-v4 | Seed 2 | Tag: best
+2026-03-31 08:17:55,041 [INFO]   Return: 3386.37 ± 0.27
+2026-03-31 08:17:55,041 [INFO]   Smoothness: 0.1675
+2026-03-31 08:17:55,041 [INFO]   Recovery: 2.0528
+2026-03-31 08:17:55,042 [INFO] Evaluating PPO on Hopper-v4 | Seed 3 | Tag: best
+2026-03-31 08:19:10,115 [INFO]   Return: 3393.58 ± 0.26
+2026-03-31 08:19:10,115 [INFO]   Smoothness: 0.1698
+2026-03-31 08:19:10,115 [INFO]   Recovery: 2.0597
+2026-03-31 08:19:10,116 [INFO] Evaluating PPO on Hopper-v4 | Seed 4 | Tag: best
+2026-03-31 08:20:20,448 [INFO]   Return: 3037.60 ± 33.49
+2026-03-31 08:20:20,448 [INFO]   Smoothness: 0.1280
+2026-03-31 08:20:20,448 [INFO]   Recovery: 1.9693
+2026-03-31 08:20:20,448 [INFO] Evaluating PPO on Hopper-v4 | Seed 5 | Tag: best
+2026-03-31 08:21:02,427 [INFO]   Return: 1841.30 ± 35.02
+2026-03-31 08:21:02,427 [INFO]   Smoothness: 0.1147
+2026-03-31 08:21:02,427 [INFO]   Recovery: 2.1621
+2026-03-31 08:21:02,427 [INFO] Evaluating PPO on Hopper-v4 | Seed 6 | Tag: best
+2026-03-31 08:22:17,817 [INFO]   Return: 3494.90 ± 0.23
+2026-03-31 08:22:17,817 [INFO]   Smoothness: 0.1348
+2026-03-31 08:22:17,817 [INFO]   Recovery: 2.1132
+2026-03-31 08:22:17,817 [INFO] Evaluating PPO on Hopper-v4 | Seed 7 | Tag: best
+2026-03-31 08:23:33,044 [INFO]   Return: 3428.40 ± 0.67
+2026-03-31 08:23:33,044 [INFO]   Smoothness: 0.1305
+2026-03-31 08:23:33,044 [INFO]   Recovery: 2.0829
+2026-03-31 08:23:33,044 [INFO] Evaluating PPO on Hopper-v4 | Seed 8 | Tag: best
+2026-03-31 08:24:44,865 [INFO]   Return: 3320.53 ± 40.48
+2026-03-31 08:24:44,865 [INFO]   Smoothness: 0.1304
+2026-03-31 08:24:44,865 [INFO]   Recovery: 2.1023
+2026-03-31 08:24:44,865 [INFO] Evaluating PPO on Hopper-v4 | Seed 9 | Tag: best
+2026-03-31 08:26:00,068 [INFO]   Return: 3376.34 ± 0.40
+2026-03-31 08:26:00,068 [INFO]   Smoothness: 0.2095
+2026-03-31 08:26:00,068 [INFO]   Recovery: 2.0410
+2026-03-31 08:26:00,069 [INFO] Evaluating SAC on Hopper-v4 | Seed 0 | Tag: best
+2026-03-31 08:27:26,789 [INFO]   Return: 3377.27 ± 11.67
+2026-03-31 08:27:26,789 [INFO]   Smoothness: 0.3836
+2026-03-31 08:27:26,789 [INFO]   Recovery: 2.2286
+2026-03-31 08:27:26,790 [INFO] Evaluating SAC on Hopper-v4 | Seed 1 | Tag: best
+2026-03-31 08:28:54,243 [INFO]   Return: 3064.85 ± 1.69
+2026-03-31 08:28:54,243 [INFO]   Smoothness: 0.3670
+2026-03-31 08:28:54,243 [INFO]   Recovery: 1.7724
+2026-03-31 08:28:54,244 [INFO] Evaluating SAC on Hopper-v4 | Seed 2 | Tag: best
+2026-03-31 08:30:19,545 [INFO]   Return: 3077.50 ± 11.40
+2026-03-31 08:30:19,545 [INFO]   Smoothness: 0.3463
+2026-03-31 08:30:19,545 [INFO]   Recovery: 1.8997
+2026-03-31 08:30:19,545 [INFO] Evaluating SAC on Hopper-v4 | Seed 3 | Tag: best
+2026-03-31 08:31:46,287 [INFO]   Return: 3206.30 ± 14.28
+2026-03-31 08:31:46,287 [INFO]   Smoothness: 0.3851
+2026-03-31 08:31:46,287 [INFO]   Recovery: 1.9805
+2026-03-31 08:31:46,287 [INFO] Evaluating SAC on Hopper-v4 | Seed 4 | Tag: best
+2026-03-31 08:33:11,799 [INFO]   Return: 3193.15 ± 19.10
+2026-03-31 08:33:11,799 [INFO]   Smoothness: 0.6390
+2026-03-31 08:33:11,799 [INFO]   Recovery: 1.9567
+2026-03-31 08:33:11,800 [INFO] Evaluating SAC on Hopper-v4 | Seed 5 | Tag: best
+2026-03-31 08:34:39,148 [INFO]   Return: 3014.33 ± 8.84
+2026-03-31 08:34:39,148 [INFO]   Smoothness: 0.2722
+2026-03-31 08:34:39,148 [INFO]   Recovery: 1.7770
+2026-03-31 08:34:39,149 [INFO] Evaluating SAC on Hopper-v4 | Seed 6 | Tag: best
+2026-03-31 08:34:58,711 [INFO]   Return: 685.52 ± 0.41
+2026-03-31 08:34:58,711 [INFO]   Smoothness: 0.3762
+2026-03-31 08:34:58,711 [INFO]   Recovery: 2.0470
+2026-03-31 08:34:58,712 [INFO] Evaluating SAC on Hopper-v4 | Seed 7 | Tag: best
+2026-03-31 08:36:25,504 [INFO]   Return: 2985.42 ± 7.54
+2026-03-31 08:36:25,504 [INFO]   Smoothness: 0.3971
+2026-03-31 08:36:25,504 [INFO]   Recovery: 1.8538
+2026-03-31 08:36:25,505 [INFO] Evaluating SAC on Hopper-v4 | Seed 8 | Tag: best
+2026-03-31 08:37:15,504 [INFO]   Return: 1880.14 ± 63.00
+2026-03-31 08:37:15,504 [INFO]   Smoothness: 0.4929
+2026-03-31 08:37:15,504 [INFO]   Recovery: 1.9927
+2026-03-31 08:37:15,504 [INFO] Evaluating SAC on Hopper-v4 | Seed 9 | Tag: best
+2026-03-31 08:38:42,895 [INFO]   Return: 3217.64 ± 1.40
+2026-03-31 08:38:42,895 [INFO]   Smoothness: 0.3001
+2026-03-31 08:38:42,895 [INFO]   Recovery: 1.9089
+2026-03-31 08:38:42,896 [INFO] 
+============================================================
+Random baseline: HalfCheetah-v4
+============================================================
+2026-03-31 08:38:51,764 [INFO] Random baseline on HalfCheetah-v4: Return=-292.18
+2026-03-31 08:38:51,765 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 0 | Tag: best
+2026-03-31 08:39:56,682 [INFO]   Return: 1050.28 ± 7.18
+2026-03-31 08:39:56,682 [INFO]   Smoothness: 2.2886
+2026-03-31 08:39:56,682 [INFO]   Recovery: 2.9636
+2026-03-31 08:39:56,682 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 1 | Tag: best
+2026-03-31 08:41:01,591 [INFO]   Return: 1228.33 ± 6.63
+2026-03-31 08:41:01,591 [INFO]   Smoothness: 2.1406
+2026-03-31 08:41:01,591 [INFO]   Recovery: 6.1628
+2026-03-31 08:41:01,591 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 2 | Tag: best
+2026-03-31 08:42:07,029 [INFO]   Return: 1029.95 ± 7.11
+2026-03-31 08:42:07,029 [INFO]   Smoothness: 1.6312
+2026-03-31 08:42:07,029 [INFO]   Recovery: 1.4922
+2026-03-31 08:42:07,030 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 3 | Tag: best
+2026-03-31 08:43:12,238 [INFO]   Return: 1362.03 ± 8.05
+2026-03-31 08:43:12,238 [INFO]   Smoothness: 1.7607
+2026-03-31 08:43:12,238 [INFO]   Recovery: 1.3273
+2026-03-31 08:43:12,238 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 4 | Tag: best
+2026-03-31 08:44:17,636 [INFO]   Return: 751.39 ± 9.58
+2026-03-31 08:44:17,636 [INFO]   Smoothness: 1.7050
+2026-03-31 08:44:17,636 [INFO]   Recovery: 1.9429
+2026-03-31 08:44:17,636 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 5 | Tag: best
+2026-03-31 08:45:22,704 [INFO]   Return: 1196.49 ± 3.88
+2026-03-31 08:45:22,704 [INFO]   Smoothness: 1.9077
+2026-03-31 08:45:22,704 [INFO]   Recovery: 0.9496
+2026-03-31 08:45:22,705 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 6 | Tag: best
+2026-03-31 08:46:27,785 [INFO]   Return: 1127.38 ± 12.39
+2026-03-31 08:46:27,785 [INFO]   Smoothness: 2.0292
+2026-03-31 08:46:27,785 [INFO]   Recovery: 1.7003
+2026-03-31 08:46:27,785 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 7 | Tag: best
+2026-03-31 08:47:32,701 [INFO]   Return: 1307.73 ± 4.00
+2026-03-31 08:47:32,701 [INFO]   Smoothness: 1.8943
+2026-03-31 08:47:32,701 [INFO]   Recovery: 2.5575
+2026-03-31 08:47:32,701 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 8 | Tag: best
+2026-03-31 08:48:37,579 [INFO]   Return: 1342.41 ± 4.40
+2026-03-31 08:48:37,579 [INFO]   Smoothness: 2.4702
+2026-03-31 08:48:37,579 [INFO]   Recovery: 2.0407
+2026-03-31 08:48:37,580 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 9 | Tag: best
+2026-03-31 08:49:42,342 [INFO]   Return: 1028.34 ± 5.02
+2026-03-31 08:49:42,342 [INFO]   Smoothness: 1.9739
+2026-03-31 08:49:42,342 [INFO]   Recovery: 0.8049
+2026-03-31 08:49:42,342 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 0 | Tag: best
+2026-03-31 08:50:57,148 [INFO]   Return: 6682.45 ± 53.09
+2026-03-31 08:50:57,148 [INFO]   Smoothness: 2.3332
+2026-03-31 08:50:57,148 [INFO]   Recovery: 2.3279
+2026-03-31 08:50:57,149 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 1 | Tag: best
+2026-03-31 08:52:12,318 [INFO]   Return: 6271.31 ± 6.48
+2026-03-31 08:52:12,318 [INFO]   Smoothness: 2.8137
+2026-03-31 08:52:12,318 [INFO]   Recovery: 2.3047
+2026-03-31 08:52:12,318 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 2 | Tag: best
+2026-03-31 08:53:27,077 [INFO]   Return: 5134.51 ± 5.02
+2026-03-31 08:53:27,078 [INFO]   Smoothness: 2.6985
+2026-03-31 08:53:27,078 [INFO]   Recovery: 1.9676
+2026-03-31 08:53:27,078 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 3 | Tag: best
+2026-03-31 08:54:42,048 [INFO]   Return: 6185.70 ± 8.47
+2026-03-31 08:54:42,048 [INFO]   Smoothness: 2.4319
+2026-03-31 08:54:42,048 [INFO]   Recovery: 2.2876
+2026-03-31 08:54:42,048 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 4 | Tag: best
+2026-03-31 08:55:57,525 [INFO]   Return: 6667.11 ± 10.24
+2026-03-31 08:55:57,525 [INFO]   Smoothness: 2.5603
+2026-03-31 08:55:57,525 [INFO]   Recovery: 2.4578
+2026-03-31 08:55:57,525 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 5 | Tag: best
+2026-03-31 08:57:12,874 [INFO]   Return: 5651.46 ± 5.92
+2026-03-31 08:57:12,874 [INFO]   Smoothness: 2.6486
+2026-03-31 08:57:12,874 [INFO]   Recovery: 2.3168
+2026-03-31 08:57:12,874 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 6 | Tag: best
+2026-03-31 08:58:27,839 [INFO]   Return: 6168.45 ± 9.52
+2026-03-31 08:58:27,839 [INFO]   Smoothness: 2.4012
+2026-03-31 08:58:27,839 [INFO]   Recovery: 2.2546
+2026-03-31 08:58:27,840 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 7 | Tag: best
+2026-03-31 08:59:43,075 [INFO]   Return: 6135.13 ± 8.74
+2026-03-31 08:59:43,075 [INFO]   Smoothness: 2.4855
+2026-03-31 08:59:43,075 [INFO]   Recovery: 2.2164
+2026-03-31 08:59:43,076 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 8 | Tag: best
+2026-03-31 09:00:58,671 [INFO]   Return: 7264.80 ± 9.14
+2026-03-31 09:00:58,671 [INFO]   Smoothness: 2.3507
+2026-03-31 09:00:58,671 [INFO]   Recovery: 2.4783
+2026-03-31 09:00:58,672 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 9 | Tag: best
+2026-03-31 09:02:13,367 [INFO]   Return: 6445.89 ± 8.91
+2026-03-31 09:02:13,367 [INFO]   Smoothness: 2.2534
+2026-03-31 09:02:13,367 [INFO]   Recovery: 2.2928
+2026-03-31 09:02:13,367 [INFO] 
+============================================================
+Random baseline: SafetyPointGoal1-v0
+============================================================
+2026-03-31 09:05:00,332 [INFO] Random baseline on SafetyPointGoal1-v0: Return=-0.11

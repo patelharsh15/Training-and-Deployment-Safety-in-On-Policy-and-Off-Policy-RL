@@ -1,0 +1,10 @@
+2026-03-31 03:21:06,733 [INFO] ============================================================
+2026-03-31 03:21:06,733 [INFO] Training SAC on HalfCheetah-v4 | Seed 6
+2026-03-31 03:21:06,733 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-31 03:21:06,733 [INFO] Total timesteps: 1000000
+2026-03-31 03:21:06,733 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/sac/best/seed_6
+2026-03-31 03:21:06,733 [INFO] ============================================================
+2026-03-31 03:21:06,798 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-31 03:21:09,411 [INFO] Starting training...
+2026-03-31 04:33:40,603 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/sac/best/seed_6/logs/training_metrics.json
+2026-03-31 04:33:40,623 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/sac/best/seed_6

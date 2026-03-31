@@ -1,0 +1,8 @@
+2026-03-31 08:14:57,192 [INFO] ============================================================
+2026-03-31 08:14:57,192 [INFO] Training SAC on SafetyPointGoal1-v0 (Safety) | Seed 5
+2026-03-31 08:14:57,192 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-31 08:14:57,192 [INFO] Total timesteps: 1000000
+2026-03-31 08:14:57,192 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/sac/best/seed_5
+2026-03-31 08:14:57,192 [INFO] ============================================================
+2026-03-31 08:14:57,245 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-31 08:15:01,738 [INFO] Starting training...

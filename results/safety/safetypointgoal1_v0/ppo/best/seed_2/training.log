@@ -14,3 +14,5 @@
 2026-03-31 13:56:38,952 [INFO] ============================================================
 2026-03-31 13:56:39,006 [INFO] Using GPU: NVIDIA GeForce RTX 3070
 2026-03-31 13:56:45,978 [INFO] Starting training...
+2026-03-31 15:39:23,293 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_2/logs/training_metrics.json
+2026-03-31 15:39:23,329 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_2

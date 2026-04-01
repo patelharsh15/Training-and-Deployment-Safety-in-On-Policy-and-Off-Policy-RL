@@ -6,3 +6,13 @@
 2026-03-31 08:13:23,225 [INFO] ============================================================
 2026-03-31 08:13:23,277 [INFO] Using GPU: NVIDIA GeForce RTX 3070
 2026-03-31 08:13:27,779 [INFO] Starting training...
+2026-03-31 15:39:29,162 [INFO] ============================================================
+2026-03-31 15:39:29,162 [INFO] Training PPO on SafetyPointGoal1-v0 (Safety) | Seed 3
+2026-03-31 15:39:29,162 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-03-31 15:39:29,162 [INFO] Total timesteps: 1000000
+2026-03-31 15:39:29,162 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_3
+2026-03-31 15:39:29,162 [INFO] ============================================================
+2026-03-31 15:39:29,229 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-03-31 15:39:37,426 [INFO] Starting training...
+2026-03-31 17:19:33,820 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_3/logs/training_metrics.json
+2026-03-31 17:19:33,840 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/safety/safetypointgoal1_v0/ppo/best/seed_3

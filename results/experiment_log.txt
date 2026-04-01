@@ -593,3 +593,21 @@ ValueError: too many values to unpack (expected 5)
 2026-03-31 10:35:49,413 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-31 12:16:39,731 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-03-31 13:56:37,277 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 15:39:25,211 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 17:19:34,758 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 18:57:21,978 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 20:34:38,052 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 22:12:45,296 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-03-31 23:50:45,251 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 01:28:09,807 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo ppo --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 03:05:16,903 [INFO] Skipping HP search, using defaults for sac/SafetyPointGoal1-v0
+2026-04-01 03:05:16,903 [INFO] 
+============================================================
+2026-04-01 03:05:16,903 [INFO] Final Runs: SAC on SafetyPointGoal1-v0
+2026-04-01 03:05:16,903 [INFO] lr=0.0003, γ=0.99, bs=256, Seeds: 10
+2026-04-01 03:05:16,903 [INFO] ============================================================
+
+2026-04-01 03:05:16,903 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 0 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 05:23:47,443 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 07:41:37,721 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 10:00:21,124 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best

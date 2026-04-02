@@ -12,7 +12,3 @@ __pycache__/
 *.pth
 *.h5
 *.onnx
-
-# Data and Videos
-*.mp4
-*.avi

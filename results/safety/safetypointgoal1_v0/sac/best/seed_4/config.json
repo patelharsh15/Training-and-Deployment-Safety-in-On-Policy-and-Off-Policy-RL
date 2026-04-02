@@ -6,7 +6,7 @@
   "gamma": 0.99,
   "batch_size": 256,
   "total_timesteps": 1000000,
-  "n_envs": 1,
+  "n_envs": 8,
   "policy_kwargs": {
     "net_arch": [
       256,
@@ -15,5 +15,5 @@
     "use_sde": false
   },
   "is_safety": true,
-  "timestamp": "2026-03-31T08:14:53.978240"
+  "timestamp": "2026-04-01T12:20:23.626672"
 }

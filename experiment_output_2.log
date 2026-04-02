@@ -95,3 +95,309 @@ nohup: ignoring input
 2026-04-01 05:23:47,443 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 1 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-04-01 07:41:37,721 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 2 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
 2026-04-01 10:00:21,124 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 3 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 12:20:14,957 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 4 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 14:38:53,164 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 5 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 16:56:36,155 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 6 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 19:14:48,983 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 7 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 21:32:19,905 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 8 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-01 23:51:13,535 [INFO] Running: /home/harshp/Downloads/rl_drl_assignment/venv/bin/python src/train_safety.py --env SafetyPointGoal1-v0 --algo sac --seed 9 --lr 0.0003 --gamma 0.99 --batch-size 256 --total-timesteps 1000000 --tag best
+2026-04-02 02:10:08,377 [INFO] 
+============================================================
+2026-04-02 02:10:08,377 [INFO] All experiments complete!
+2026-04-02 02:10:08,377 [INFO] ============================================================
+2026-04-02 02:10:08,377 [INFO] Starting evaluation of all models...
+2026-04-02 02:10:08,569 [INFO] 
+============================================================
+Random baseline: Hopper-v4
+============================================================
+2026-04-02 02:10:09,558 [INFO] Random baseline on Hopper-v4: Return=22.35
+2026-04-02 02:10:09,564 [INFO] Evaluating PPO on Hopper-v4 | Seed 0 | Tag: best
+2026-04-02 02:10:26,946 [INFO]   Return: 158.51 ± 5.75
+2026-04-02 02:10:26,947 [INFO]   Smoothness: 0.0000
+2026-04-02 02:10:26,947 [INFO]   Recovery: 0.8818
+2026-04-02 02:10:26,947 [INFO] Evaluating PPO on Hopper-v4 | Seed 1 | Tag: best
+2026-04-02 02:11:13,802 [INFO]   Return: 2153.52 ± 26.99
+2026-04-02 02:11:13,802 [INFO]   Smoothness: 0.1072
+2026-04-02 02:11:13,802 [INFO]   Recovery: 2.1977
+2026-04-02 02:11:13,802 [INFO] Evaluating PPO on Hopper-v4 | Seed 2 | Tag: best
+2026-04-02 02:12:29,089 [INFO]   Return: 3386.06 ± 0.26
+2026-04-02 02:12:29,090 [INFO]   Smoothness: 0.1675
+2026-04-02 02:12:29,090 [INFO]   Recovery: 2.0512
+2026-04-02 02:12:29,090 [INFO] Evaluating PPO on Hopper-v4 | Seed 3 | Tag: best
+2026-04-02 02:13:43,776 [INFO]   Return: 3393.89 ± 0.30
+2026-04-02 02:13:43,777 [INFO]   Smoothness: 0.1700
+2026-04-02 02:13:43,777 [INFO]   Recovery: 2.0602
+2026-04-02 02:13:43,777 [INFO] Evaluating PPO on Hopper-v4 | Seed 4 | Tag: best
+2026-04-02 02:14:51,946 [INFO]   Return: 2965.82 ± 41.17
+2026-04-02 02:14:51,946 [INFO]   Smoothness: 0.1281
+2026-04-02 02:14:51,946 [INFO]   Recovery: 1.9636
+2026-04-02 02:14:51,947 [INFO] Evaluating PPO on Hopper-v4 | Seed 5 | Tag: best
+2026-04-02 02:15:32,070 [INFO]   Return: 1778.27 ± 26.63
+2026-04-02 02:15:32,070 [INFO]   Smoothness: 0.1145
+2026-04-02 02:15:32,070 [INFO]   Recovery: 2.1612
+2026-04-02 02:15:32,071 [INFO] Evaluating PPO on Hopper-v4 | Seed 6 | Tag: best
+2026-04-02 02:16:47,414 [INFO]   Return: 3495.18 ± 0.25
+2026-04-02 02:16:47,414 [INFO]   Smoothness: 0.1349
+2026-04-02 02:16:47,414 [INFO]   Recovery: 2.1140
+2026-04-02 02:16:47,415 [INFO] Evaluating PPO on Hopper-v4 | Seed 7 | Tag: best
+2026-04-02 02:18:02,389 [INFO]   Return: 3429.72 ± 0.63
+2026-04-02 02:18:02,389 [INFO]   Smoothness: 0.1303
+2026-04-02 02:18:02,389 [INFO]   Recovery: 2.0790
+2026-04-02 02:18:02,389 [INFO] Evaluating PPO on Hopper-v4 | Seed 8 | Tag: best
+2026-04-02 02:19:14,475 [INFO]   Return: 3303.31 ± 41.29
+2026-04-02 02:19:14,475 [INFO]   Smoothness: 0.1305
+2026-04-02 02:19:14,475 [INFO]   Recovery: 2.0864
+2026-04-02 02:19:14,476 [INFO] Evaluating PPO on Hopper-v4 | Seed 9 | Tag: best
+2026-04-02 02:20:29,396 [INFO]   Return: 3376.53 ± 0.39
+2026-04-02 02:20:29,396 [INFO]   Smoothness: 0.2095
+2026-04-02 02:20:29,396 [INFO]   Recovery: 2.0388
+2026-04-02 02:20:29,396 [INFO] Evaluating SAC on Hopper-v4 | Seed 0 | Tag: best
+2026-04-02 02:21:55,461 [INFO]   Return: 3358.35 ± 14.85
+2026-04-02 02:21:55,461 [INFO]   Smoothness: 0.3868
+2026-04-02 02:21:55,461 [INFO]   Recovery: 2.2242
+2026-04-02 02:21:55,462 [INFO] Evaluating SAC on Hopper-v4 | Seed 1 | Tag: best
+2026-04-02 02:23:22,957 [INFO]   Return: 3067.63 ± 1.41
+2026-04-02 02:23:22,957 [INFO]   Smoothness: 0.3660
+2026-04-02 02:23:22,957 [INFO]   Recovery: 1.7711
+2026-04-02 02:23:22,958 [INFO] Evaluating SAC on Hopper-v4 | Seed 2 | Tag: best
+2026-04-02 02:24:48,072 [INFO]   Return: 3058.05 ± 21.12
+2026-04-02 02:24:48,072 [INFO]   Smoothness: 0.3460
+2026-04-02 02:24:48,072 [INFO]   Recovery: 1.8912
+2026-04-02 02:24:48,072 [INFO] Evaluating SAC on Hopper-v4 | Seed 3 | Tag: best
+2026-04-02 02:26:14,044 [INFO]   Return: 3205.32 ± 11.10
+2026-04-02 02:26:14,044 [INFO]   Smoothness: 0.3883
+2026-04-02 02:26:14,044 [INFO]   Recovery: 1.9966
+2026-04-02 02:26:14,045 [INFO] Evaluating SAC on Hopper-v4 | Seed 4 | Tag: best
+2026-04-02 02:27:39,486 [INFO]   Return: 3193.16 ± 24.52
+2026-04-02 02:27:39,486 [INFO]   Smoothness: 0.6428
+2026-04-02 02:27:39,486 [INFO]   Recovery: 1.9481
+2026-04-02 02:27:39,487 [INFO] Evaluating SAC on Hopper-v4 | Seed 5 | Tag: best
+2026-04-02 02:29:06,612 [INFO]   Return: 3007.86 ± 10.85
+2026-04-02 02:29:06,613 [INFO]   Smoothness: 0.2746
+2026-04-02 02:29:06,613 [INFO]   Recovery: 1.7960
+2026-04-02 02:29:06,613 [INFO] Evaluating SAC on Hopper-v4 | Seed 6 | Tag: best
+2026-04-02 02:29:26,116 [INFO]   Return: 685.79 ± 0.37
+2026-04-02 02:29:26,117 [INFO]   Smoothness: 0.3740
+2026-04-02 02:29:26,117 [INFO]   Recovery: 2.0603
+2026-04-02 02:29:26,117 [INFO] Evaluating SAC on Hopper-v4 | Seed 7 | Tag: best
+2026-04-02 02:30:53,542 [INFO]   Return: 3001.03 ± 4.40
+2026-04-02 02:30:53,542 [INFO]   Smoothness: 0.3966
+2026-04-02 02:30:53,542 [INFO]   Recovery: 1.8566
+2026-04-02 02:30:53,543 [INFO] Evaluating SAC on Hopper-v4 | Seed 8 | Tag: best
+2026-04-02 02:31:41,661 [INFO]   Return: 1816.75 ± 51.72
+2026-04-02 02:31:41,661 [INFO]   Smoothness: 0.4951
+2026-04-02 02:31:41,661 [INFO]   Recovery: 1.9839
+2026-04-02 02:31:41,662 [INFO] Evaluating SAC on Hopper-v4 | Seed 9 | Tag: best
+2026-04-02 02:33:09,309 [INFO]   Return: 3220.91 ± 1.44
+2026-04-02 02:33:09,309 [INFO]   Smoothness: 0.3009
+2026-04-02 02:33:09,309 [INFO]   Recovery: 1.9014
+2026-04-02 02:33:09,309 [INFO] 
+============================================================
+Random baseline: HalfCheetah-v4
+============================================================
+2026-04-02 02:33:18,247 [INFO] Random baseline on HalfCheetah-v4: Return=-282.69
+2026-04-02 02:33:18,248 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 0 | Tag: best
+2026-04-02 02:34:23,218 [INFO]   Return: 1068.30 ± 6.66
+2026-04-02 02:34:23,218 [INFO]   Smoothness: 2.2950
+2026-04-02 02:34:23,218 [INFO]   Recovery: 3.0423
+2026-04-02 02:34:23,219 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 1 | Tag: best
+2026-04-02 02:35:28,176 [INFO]   Return: 1229.07 ± 6.06
+2026-04-02 02:35:28,176 [INFO]   Smoothness: 2.1438
+2026-04-02 02:35:28,176 [INFO]   Recovery: 3.0367
+2026-04-02 02:35:28,176 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 2 | Tag: best
+2026-04-02 02:36:33,505 [INFO]   Return: 1021.67 ± 7.67
+2026-04-02 02:36:33,505 [INFO]   Smoothness: 1.6314
+2026-04-02 02:36:33,505 [INFO]   Recovery: 1.8266
+2026-04-02 02:36:33,505 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 3 | Tag: best
+2026-04-02 02:37:38,778 [INFO]   Return: 1342.42 ± 8.28
+2026-04-02 02:37:38,778 [INFO]   Smoothness: 1.7566
+2026-04-02 02:37:38,778 [INFO]   Recovery: 1.3050
+2026-04-02 02:37:38,778 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 4 | Tag: best
+2026-04-02 02:38:43,853 [INFO]   Return: 755.06 ± 9.31
+2026-04-02 02:38:43,854 [INFO]   Smoothness: 1.7035
+2026-04-02 02:38:43,854 [INFO]   Recovery: 5.4503
+2026-04-02 02:38:43,854 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 5 | Tag: best
+2026-04-02 02:39:48,415 [INFO]   Return: 1187.65 ± 3.81
+2026-04-02 02:39:48,415 [INFO]   Smoothness: 1.9075
+2026-04-02 02:39:48,415 [INFO]   Recovery: 3.7467
+2026-04-02 02:39:48,415 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 6 | Tag: best
+2026-04-02 02:40:52,800 [INFO]   Return: 1118.56 ± 16.25
+2026-04-02 02:40:52,800 [INFO]   Smoothness: 2.0245
+2026-04-02 02:40:52,800 [INFO]   Recovery: -1.0507
+2026-04-02 02:40:52,801 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 7 | Tag: best
+2026-04-02 02:41:57,350 [INFO]   Return: 1301.18 ± 4.11
+2026-04-02 02:41:57,350 [INFO]   Smoothness: 1.8971
+2026-04-02 02:41:57,350 [INFO]   Recovery: 2.4272
+2026-04-02 02:41:57,350 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 8 | Tag: best
+2026-04-02 02:43:01,952 [INFO]   Return: 1343.82 ± 6.18
+2026-04-02 02:43:01,952 [INFO]   Smoothness: 2.4672
+2026-04-02 02:43:01,952 [INFO]   Recovery: 1.9248
+2026-04-02 02:43:01,952 [INFO] Evaluating PPO on HalfCheetah-v4 | Seed 9 | Tag: best
+2026-04-02 02:44:06,784 [INFO]   Return: 1012.88 ± 5.90
+2026-04-02 02:44:06,785 [INFO]   Smoothness: 1.9682
+2026-04-02 02:44:06,785 [INFO]   Recovery: 1.7150
+2026-04-02 02:44:06,785 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 0 | Tag: best
+2026-04-02 02:45:22,176 [INFO]   Return: 6741.21 ± 12.01
+2026-04-02 02:45:22,176 [INFO]   Smoothness: 2.3382
+2026-04-02 02:45:22,176 [INFO]   Recovery: 2.3195
+2026-04-02 02:45:22,176 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 1 | Tag: best
+2026-04-02 02:46:37,045 [INFO]   Return: 6258.78 ± 6.78
+2026-04-02 02:46:37,045 [INFO]   Smoothness: 2.8127
+2026-04-02 02:46:37,045 [INFO]   Recovery: 2.1540
+2026-04-02 02:46:37,045 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 2 | Tag: best
+2026-04-02 02:47:51,791 [INFO]   Return: 5131.99 ± 5.70
+2026-04-02 02:47:51,791 [INFO]   Smoothness: 2.6986
+2026-04-02 02:47:51,791 [INFO]   Recovery: 2.0175
+2026-04-02 02:47:51,791 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 3 | Tag: best
+2026-04-02 02:49:06,746 [INFO]   Return: 6198.53 ± 8.74
+2026-04-02 02:49:06,746 [INFO]   Smoothness: 2.4336
+2026-04-02 02:49:06,746 [INFO]   Recovery: 2.3366
+2026-04-02 02:49:06,746 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 4 | Tag: best
+2026-04-02 02:50:22,265 [INFO]   Return: 6663.34 ± 10.91
+2026-04-02 02:50:22,265 [INFO]   Smoothness: 2.5636
+2026-04-02 02:50:22,265 [INFO]   Recovery: 2.5999
+2026-04-02 02:50:22,265 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 5 | Tag: best
+2026-04-02 02:51:37,292 [INFO]   Return: 5668.20 ± 7.37
+2026-04-02 02:51:37,292 [INFO]   Smoothness: 2.6499
+2026-04-02 02:51:37,292 [INFO]   Recovery: 2.2934
+2026-04-02 02:51:37,293 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 6 | Tag: best
+2026-04-02 02:52:52,024 [INFO]   Return: 6174.14 ± 9.46
+2026-04-02 02:52:52,024 [INFO]   Smoothness: 2.4015
+2026-04-02 02:52:52,024 [INFO]   Recovery: 2.3349
+2026-04-02 02:52:52,025 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 7 | Tag: best
+2026-04-02 02:54:06,948 [INFO]   Return: 6137.84 ± 8.54
+2026-04-02 02:54:06,948 [INFO]   Smoothness: 2.4851
+2026-04-02 02:54:06,948 [INFO]   Recovery: 2.1800
+2026-04-02 02:54:06,948 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 8 | Tag: best
+2026-04-02 02:55:21,813 [INFO]   Return: 7275.21 ± 10.76
+2026-04-02 02:55:21,813 [INFO]   Smoothness: 2.3507
+2026-04-02 02:55:21,813 [INFO]   Recovery: 2.5189
+2026-04-02 02:55:21,813 [INFO] Evaluating SAC on HalfCheetah-v4 | Seed 9 | Tag: best
+2026-04-02 02:56:36,790 [INFO]   Return: 6448.74 ± 7.40
+2026-04-02 02:56:36,790 [INFO]   Smoothness: 2.2538
+2026-04-02 02:56:36,790 [INFO]   Recovery: 2.2856
+2026-04-02 02:56:36,791 [INFO] 
+============================================================
+Random baseline: SafetyPointGoal1-v0
+============================================================
+2026-04-02 02:59:23,331 [INFO] Random baseline on SafetyPointGoal1-v0: Return=-0.05
+2026-04-02 02:59:23,346 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 0 | Tag: best
+2026-04-02 03:03:40,961 [INFO]   Return: 27.00 ± 0.10
+2026-04-02 03:03:40,961 [INFO]   Smoothness: 0.3909
+2026-04-02 03:03:40,961 [INFO]   Recovery: 2.0869
+2026-04-02 03:03:40,961 [INFO]   Mean Cost: 60.25
+2026-04-02 03:03:40,961 [INFO]   Feasibility: 8.00%
+2026-04-02 03:03:40,961 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 1 | Tag: best
+2026-04-02 03:07:57,969 [INFO]   Return: 27.01 ± 0.11
+2026-04-02 03:07:57,969 [INFO]   Smoothness: 0.3549
+2026-04-02 03:07:57,969 [INFO]   Recovery: 1.8878
+2026-04-02 03:07:57,969 [INFO]   Mean Cost: 57.92
+2026-04-02 03:07:57,969 [INFO]   Feasibility: 4.00%
+2026-04-02 03:07:57,970 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 2 | Tag: best
+2026-04-02 03:12:15,421 [INFO]   Return: 27.07 ± 0.13
+2026-04-02 03:12:15,421 [INFO]   Smoothness: 0.1235
+2026-04-02 03:12:15,421 [INFO]   Recovery: 2.4009
+2026-04-02 03:12:15,421 [INFO]   Mean Cost: 55.57
+2026-04-02 03:12:15,421 [INFO]   Feasibility: 6.00%
+2026-04-02 03:12:15,421 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 3 | Tag: best
+2026-04-02 03:16:33,464 [INFO]   Return: 26.81 ± 0.09
+2026-04-02 03:16:33,464 [INFO]   Smoothness: 0.4722
+2026-04-02 03:16:33,464 [INFO]   Recovery: 1.7070
+2026-04-02 03:16:33,464 [INFO]   Mean Cost: 58.38
+2026-04-02 03:16:33,464 [INFO]   Feasibility: 9.00%
+2026-04-02 03:16:33,464 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 4 | Tag: best
+2026-04-02 03:20:50,553 [INFO]   Return: 26.98 ± 0.12
+2026-04-02 03:20:50,553 [INFO]   Smoothness: 0.1787
+2026-04-02 03:20:50,553 [INFO]   Recovery: 1.6666
+2026-04-02 03:20:50,553 [INFO]   Mean Cost: 52.49
+2026-04-02 03:20:50,553 [INFO]   Feasibility: 6.00%
+2026-04-02 03:20:50,553 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 5 | Tag: best
+2026-04-02 03:25:07,769 [INFO]   Return: 27.04 ± 0.12
+2026-04-02 03:25:07,769 [INFO]   Smoothness: 0.1745
+2026-04-02 03:25:07,769 [INFO]   Recovery: 1.7262
+2026-04-02 03:25:07,769 [INFO]   Mean Cost: 52.60
+2026-04-02 03:25:07,769 [INFO]   Feasibility: 6.00%
+2026-04-02 03:25:07,770 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 6 | Tag: best
+2026-04-02 03:29:25,249 [INFO]   Return: 26.64 ± 0.12
+2026-04-02 03:29:25,249 [INFO]   Smoothness: 0.3905
+2026-04-02 03:29:25,249 [INFO]   Recovery: 2.0018
+2026-04-02 03:29:25,249 [INFO]   Mean Cost: 58.90
+2026-04-02 03:29:25,249 [INFO]   Feasibility: 8.00%
+2026-04-02 03:29:25,250 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 7 | Tag: best
+2026-04-02 03:33:43,213 [INFO]   Return: 27.00 ± 0.12
+2026-04-02 03:33:43,213 [INFO]   Smoothness: 0.1382
+2026-04-02 03:33:43,213 [INFO]   Recovery: 1.6285
+2026-04-02 03:33:43,213 [INFO]   Mean Cost: 49.44
+2026-04-02 03:33:43,213 [INFO]   Feasibility: 8.00%
+2026-04-02 03:33:43,213 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 8 | Tag: best
+2026-04-02 03:38:00,880 [INFO]   Return: 27.05 ± 0.12
+2026-04-02 03:38:00,880 [INFO]   Smoothness: 0.2390
+2026-04-02 03:38:00,880 [INFO]   Recovery: 1.4656
+2026-04-02 03:38:00,880 [INFO]   Mean Cost: 51.20
+2026-04-02 03:38:00,880 [INFO]   Feasibility: 8.00%
+2026-04-02 03:38:00,880 [INFO] Evaluating PPO on SafetyPointGoal1-v0 | Seed 9 | Tag: best
+2026-04-02 03:42:18,220 [INFO]   Return: 26.90 ± 0.11
+2026-04-02 03:42:18,220 [INFO]   Smoothness: 0.0987
+2026-04-02 03:42:18,220 [INFO]   Recovery: 1.7706
+2026-04-02 03:42:18,220 [INFO]   Mean Cost: 49.36
+2026-04-02 03:42:18,220 [INFO]   Feasibility: 6.00%
+2026-04-02 03:42:18,220 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 0 | Tag: best
+2026-04-02 03:46:43,065 [INFO]   Return: 26.96 ± 0.13
+2026-04-02 03:46:43,065 [INFO]   Smoothness: 0.1307
+2026-04-02 03:46:43,065 [INFO]   Recovery: 1.6484
+2026-04-02 03:46:43,065 [INFO]   Mean Cost: 46.98
+2026-04-02 03:46:43,065 [INFO]   Feasibility: 9.00%
+2026-04-02 03:46:43,066 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 1 | Tag: best
+2026-04-02 03:51:08,250 [INFO]   Return: 26.72 ± 0.29
+2026-04-02 03:51:08,250 [INFO]   Smoothness: 0.1454
+2026-04-02 03:51:08,250 [INFO]   Recovery: 1.7991
+2026-04-02 03:51:08,250 [INFO]   Mean Cost: 49.50
+2026-04-02 03:51:08,250 [INFO]   Feasibility: 11.00%
+2026-04-02 03:51:08,250 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 2 | Tag: best
+2026-04-02 03:55:33,156 [INFO]   Return: 27.25 ± 0.11
+2026-04-02 03:55:33,156 [INFO]   Smoothness: 0.1896
+2026-04-02 03:55:33,156 [INFO]   Recovery: 1.4183
+2026-04-02 03:55:33,156 [INFO]   Mean Cost: 49.13
+2026-04-02 03:55:33,156 [INFO]   Feasibility: 16.00%
+2026-04-02 03:55:33,157 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 3 | Tag: best
+2026-04-02 03:59:57,790 [INFO]   Return: 27.26 ± 0.12
+2026-04-02 03:59:57,790 [INFO]   Smoothness: 0.1063
+2026-04-02 03:59:57,790 [INFO]   Recovery: 1.5680
+2026-04-02 03:59:57,790 [INFO]   Mean Cost: 45.83
+2026-04-02 03:59:57,790 [INFO]   Feasibility: 13.00%
+2026-04-02 03:59:57,790 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 4 | Tag: best
+2026-04-02 04:04:22,181 [INFO]   Return: 27.07 ± 0.10
+2026-04-02 04:04:22,181 [INFO]   Smoothness: 0.1387
+2026-04-02 04:04:22,181 [INFO]   Recovery: 1.7794
+2026-04-02 04:04:22,181 [INFO]   Mean Cost: 46.17
+2026-04-02 04:04:22,181 [INFO]   Feasibility: 10.00%
+2026-04-02 04:04:22,181 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 5 | Tag: best
+2026-04-02 04:08:46,572 [INFO]   Return: 26.40 ± 0.13
+2026-04-02 04:08:46,572 [INFO]   Smoothness: 0.1157
+2026-04-02 04:08:46,572 [INFO]   Recovery: 1.5745
+2026-04-02 04:08:46,572 [INFO]   Mean Cost: 51.78
+2026-04-02 04:08:46,572 [INFO]   Feasibility: 13.00%
+2026-04-02 04:08:46,572 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 6 | Tag: best
+2026-04-02 04:13:11,149 [INFO]   Return: 27.21 ± 0.12
+2026-04-02 04:13:11,149 [INFO]   Smoothness: 0.1166
+2026-04-02 04:13:11,149 [INFO]   Recovery: 1.7617
+2026-04-02 04:13:11,149 [INFO]   Mean Cost: 53.20
+2026-04-02 04:13:11,149 [INFO]   Feasibility: 6.00%
+2026-04-02 04:13:11,150 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 7 | Tag: best
+2026-04-02 04:17:36,304 [INFO]   Return: 27.06 ± 0.11
+2026-04-02 04:17:36,304 [INFO]   Smoothness: 0.0994
+2026-04-02 04:17:36,304 [INFO]   Recovery: 1.7710
+2026-04-02 04:17:36,304 [INFO]   Mean Cost: 51.22
+2026-04-02 04:17:36,304 [INFO]   Feasibility: 9.00%
+2026-04-02 04:17:36,304 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 8 | Tag: best
+2026-04-02 04:22:01,289 [INFO]   Return: 27.29 ± 0.11
+2026-04-02 04:22:01,289 [INFO]   Smoothness: 0.1719
+2026-04-02 04:22:01,289 [INFO]   Recovery: 1.6408
+2026-04-02 04:22:01,289 [INFO]   Mean Cost: 55.50
+2026-04-02 04:22:01,289 [INFO]   Feasibility: 13.00%
+2026-04-02 04:22:01,290 [INFO] Evaluating SAC on SafetyPointGoal1-v0 | Seed 9 | Tag: best
+2026-04-02 04:26:26,383 [INFO]   Return: 26.93 ± 0.11
+2026-04-02 04:26:26,383 [INFO]   Smoothness: 0.1377
+2026-04-02 04:26:26,383 [INFO]   Recovery: 1.6893
+2026-04-02 04:26:26,383 [INFO]   Mean Cost: 53.91
+2026-04-02 04:26:26,383 [INFO]   Feasibility: 13.00%

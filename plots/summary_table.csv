@@ -1,5 +1,7 @@
 Environment,Algorithm,Return,Smoothness,Cost,Recovery
-Hopper-v4,PPO,2754.5 ± 325.0,0.1293,0.00,1.967
-Hopper-v4,SAC,2770.2 ± 252.3,0.3960,0.00,1.942
-HalfCheetah-v4,PPO,1142.4 ± 56.0,1.9801,0.00,2.194
-HalfCheetah-v4,SAC,6260.7 ± 174.8,2.4977,0.00,2.290
+Hopper-v4,PPO,2744.1 ± 325.5,0.1292,0.00,1.963
+Hopper-v4,SAC,2761.5 ± 254.0,0.3971,0.00,1.943
+HalfCheetah-v4,PPO,1138.1 ± 55.0,1.9795,0.00,2.342
+HalfCheetah-v4,SAC,6269.8 ± 176.3,2.4988,0.00,2.304
+SafetyPointGoal1-v0,PPO,27.0 ± 0.0,0.2561,54.61,1.834
+SafetyPointGoal1-v0,SAC,27.0 ± 0.1,0.1352,50.32,1.665

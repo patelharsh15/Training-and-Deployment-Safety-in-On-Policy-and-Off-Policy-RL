@@ -1,715 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training and Deployment Safety in On-Policy and Off-Policy RL</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-    <style>
-        :root {
-            --ppo-color: #2196F3;
-            --sac-color: #FF5722;
-            --accent: #4CAF50;
-            --dark: #1a1a2e;
-            --gray: #6c757d;
-        }
-        .reveal {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .reveal h1, .reveal h2, .reveal h3 {
-            text-transform: none;
-            font-weight: 700;
-        }
-        .reveal h1 { font-size: 2.0em; color: var(--dark); }
-        .reveal h2 { font-size: 1.5em; color: var(--dark); }
-        .reveal h3 { font-size: 1.2em; color: var(--gray); }
-        .reveal .slide-number { font-size: 14px; }
-        .reveal section { text-align: left; }
-
-        /* Title slide */
-        .title-slide { text-align: center !important; }
-        .title-slide h1 { font-size: 1.8em; margin-bottom: 0.3em; }
-        .title-slide .subtitle { color: var(--gray); font-size: 0.9em; margin-bottom: 1em; }
-        .title-slide .authors { font-size: 0.75em; color: #333; line-height: 1.8; }
-        .title-slide .course { font-size: 0.65em; color: var(--gray); margin-top: 1em; }
-
-        /* Two-column layout */
-        .two-col { display: flex; gap: 2em; align-items: flex-start; }
-        .two-col > div { flex: 1; }
-
-        /* Highlight boxes */
-        .highlight-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
-            border-left: 4px solid var(--ppo-color);
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin: 10px 0;
-            font-size: 0.85em;
-        }
-        .highlight-box.sac { border-left-color: var(--sac-color); }
-        .highlight-box.green { border-left-color: var(--accent); }
-
-        /* Research question box */
-        .rq-box {
-            background: var(--dark);
-            color: white;
-            padding: 20px 25px;
-            border-radius: 12px;
-            margin: 15px 0;
-            font-size: 0.9em;
-        }
-        .rq-box .label {
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 0.8em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Table styling */
-        .reveal table {
-            margin: 0 auto;
-            border-collapse: collapse;
-            font-size: 0.65em;
-            width: 100%;
-        }
-        .reveal table th {
-            background: var(--dark);
-            color: white;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        .reveal table td {
-            padding: 6px 12px;
-            border-bottom: 1px solid #eee;
-        }
-        .reveal table tr:nth-child(even) { background: #f8f9fa; }
-
-        /* Metric cards */
-        .metric-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 15px 0;
-        }
-        .metric-card {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 12px 16px;
-            border-left: 3px solid var(--accent);
-            font-size: 0.75em;
-        }
-        .metric-card .metric-name {
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 4px;
-        }
-        .metric-card .metric-desc {
-            color: var(--gray);
-            font-size: 0.9em;
-        }
-
-        /* Algorithm comparison */
-        .algo-compare {
-            display: flex;
-            gap: 15px;
-            margin: 15px 0;
-        }
-        .algo-card {
-            flex: 1;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.8em;
-        }
-        .algo-card.ppo {
-            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-            border: 2px solid var(--ppo-color);
-        }
-        .algo-card.sac {
-            background: linear-gradient(135deg, #fbe9e7, #ffccbc);
-            border: 2px solid var(--sac-color);
-        }
-        .algo-card h4 {
-            margin: 0 0 8px 0;
-            font-size: 1.1em;
-        }
-        .algo-card.ppo h4 { color: var(--ppo-color); }
-        .algo-card.sac h4 { color: var(--sac-color); }
-
-        /* Plot placeholder */
-        .plot-placeholder {
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 300px;
-            color: var(--gray);
-            font-size: 0.9em;
-        }
-
-        /* Small text */
-        .small { font-size: 0.7em; color: var(--gray); }
-        .tiny { font-size: 0.6em; color: var(--gray); }
-
-        /* Lists */
-        .reveal ul, .reveal ol {
-            font-size: 0.85em;
-            line-height: 1.6;
-        }
-        .reveal li { margin-bottom: 6px; }
-
-        /* Emphasis */
-        .ppo-text { color: var(--ppo-color); font-weight: 700; }
-        .sac-text { color: var(--sac-color); font-weight: 700; }
-        .key-finding {
-            background: #fff3cd;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        /* Footer */
-        .slide-footer {
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 0.5em;
-            color: #aaa;
-        }
-
-        /* Image containers */
-        .plot-img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .plot-container {
-            text-align: center;
-            margin: 10px 0;
-        }
-        .plot-container img {
-            max-height: 400px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training and Deployment Safety in On-Policy and Off-Policy RL</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
+<style>
+  .reveal { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  .reveal h1 { font-size: 1.8em; color: #1a237e; }
+  .reveal h2 { font-size: 1.4em; color: #283593; }
+  .reveal h3 { font-size: 1.1em; color: #3949ab; }
+  .reveal p, .reveal li { font-size: 0.65em; line-height: 1.4; }
+  .reveal table { font-size: 0.55em; margin: 0 auto; border-collapse: collapse; }
+  .reveal th { background: #1a237e; color: white; padding: 6px 12px; }
+  .reveal td { padding: 5px 10px; border: 1px solid #ccc; }
+  .reveal tr:nth-child(even) { background: #e8eaf6; }
+  .reveal img { max-height: 420px; border: 1px solid #ddd; border-radius: 4px; }
+  .reveal .small { font-size: 0.5em; }
+  .reveal .highlight { color: #d32f2f; font-weight: bold; }
+  .reveal .good { color: #2e7d32; font-weight: bold; }
+  .two-col { display: flex; gap: 20px; align-items: flex-start; }
+  .two-col > div { flex: 1; }
+  .title-slide h1 { font-size: 1.5em; margin-bottom: 10px; }
+  .title-slide p { font-size: 0.6em; }
+  .reveal .key-finding { background: #e8eaf6; border-left: 4px solid #1a237e; padding: 10px 15px; margin: 10px 0; border-radius: 4px; text-align: left; }
+  .reveal .warning-box { background: #fff3e0; border-left: 4px solid #e65100; padding: 10px 15px; margin: 10px 0; border-radius: 4px; text-align: left; }
+  .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .metric-card { background: #f5f5f5; padding: 10px; border-radius: 6px; text-align: center; }
+  .metric-card .value { font-size: 1.4em; font-weight: bold; color: #1a237e; }
+  .metric-card .label { font-size: 0.5em; color: #666; }
+</style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 1: TITLE (<1 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 1: TITLE ==================== -->
 <section class="title-slide">
-    <h1>Training and Deployment Safety in<br>On-Policy and Off-Policy RL</h1>
-    <div class="subtitle">A Comparative Study of PPO and SAC</div>
-    <div class="authors">
-        <strong>Farina Salman</strong> · <strong>Rachna Sunilkumar Deshpande</strong><br>
-        <strong>Abdulaziz Al-Tayar</strong> · <strong>Harsh Patel</strong>
-    </div>
-    <div class="course">
-        CSI5340 / ELG5214 — Reinforcement Learning & Deep RL<br>
-        University of Ottawa · April 2026
-    </div>
+  <h1>Training and Deployment Safety in<br>On-Policy and Off-Policy RL</h1>
+  <p style="color:#555; margin-top:20px;">
+    <strong>Farina Salman</strong> · <strong>Rachna Sunilkumar Deshpande</strong> · <strong>Abdulaziz Al-Tayar</strong> · <strong>Harsh Patel</strong>
+  </p>
+  <p style="color:#888;">University of Ottawa — CSI 5180 / CEG 5270: Topics in AI</p>
+  <p style="color:#888;">April 2026</p>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 2: MOTIVATION & PROBLEM STATEMENT (1.5 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 2: AGENDA ==================== -->
 <section>
-    <h2>Motivation & Problem Statement</h2>
-    <div class="two-col">
-        <div>
-            <p style="font-size:0.85em;">
-                RL algorithms like <span class="ppo-text">PPO</span> and <span class="sac-text">SAC</span>
-                achieve high cumulative rewards, but <strong>real-world deployment</strong> demands more:
-            </p>
-            <ul>
-                <li><strong>Stability</strong> — consistent behavior across training runs</li>
-                <li><strong>Safety</strong> — adherence to constraints, low failure rates</li>
-                <li><strong>Robustness</strong> — recovery from unexpected perturbations</li>
-            </ul>
-            <div class="highlight-box green" style="margin-top:15px;">
-                <strong>Why does this matter?</strong><br>
-                Autonomous vehicles, robotic arms, and industrial control systems
-                require predictable, safe policies — not just high rewards.
-            </div>
-        </div>
-        <div>
-            <div class="algo-compare" style="flex-direction:column;">
-                <div class="algo-card ppo">
-                    <h4>PPO (On-Policy)</h4>
-                    Clipped surrogate objective → <strong>conservative updates</strong><br>
-                    Known for training stability
-                </div>
-                <div class="algo-card sac">
-                    <h4>SAC (Off-Policy)</h4>
-                    Maximum entropy framework → <strong>exploratory behavior</strong><br>
-                    Known for sample efficiency
-                </div>
-            </div>
-        </div>
-    </div>
+  <h2>Agenda</h2>
+  <ol style="font-size:0.7em;">
+    <li>Motivation &amp; Problem Statement</li>
+    <li>Gap in the Literature</li>
+    <li>Research Questions</li>
+    <li>Experimental Methodology</li>
+    <li>Results — MuJoCo Environments</li>
+    <li>Results — Safety-Gymnasium Environment</li>
+    <li>Qualitative Video Analysis</li>
+    <li>Discussion &amp; Algorithmic Insights</li>
+    <li>Limitations &amp; Future Work</li>
+    <li>Conclusion</li>
+  </ol>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 3: BACKGROUND & RESEARCH GAP (1.5 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 3: MOTIVATION ==================== -->
 <section>
-    <h2>Background & Research Gap</h2>
-    <div class="two-col">
-        <div>
-            <h3>Prior Work</h3>
-            <ul>
-                <li><strong>Schulman et al. (2017)</strong> — PPO: stable policy updates via clipping</li>
-                <li><strong>Haarnoja et al. (2018)</strong> — SAC: maximum entropy for robust exploration</li>
-                <li><strong>Henderson et al. (2018)</strong> — RL reproducibility challenges</li>
-                <li><strong>Engstrom et al. (2020)</strong> — Implementation details matter more than algorithms</li>
-                <li><strong>Andrychowicz et al. (2021)</strong> — Large-scale on-policy RL study</li>
-            </ul>
-        </div>
-        <div>
-            <h3>The Gap</h3>
-            <div class="highlight-box">
-                Prior comparisons focus on <strong>cumulative reward</strong> and <strong>sample efficiency</strong>.
-                <br><br>
-                <strong>Missing:</strong> Direct, controlled comparison of
-                <em>training stability</em>, <em>policy smoothness</em>,
-                <em>constraint adherence</em>, and <em>deployment robustness</em>
-                under matched conditions.
-            </div>
-            <p class="small" style="margin-top:10px;">
-                We selected these references as the foundational papers for PPO, SAC,
-                and the most rigorous empirical methodology studies — they establish
-                the evaluation standards we build upon.
-            </p>
-        </div>
+  <h2>1. Motivation</h2>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li>RL is being deployed in <strong>safety-critical domains</strong>: autonomous vehicles, robotic surgery, industrial control</li>
+        <li>Algorithms like <strong>PPO</strong> (on-policy) and <strong>SAC</strong> (off-policy) achieve high rewards, but behave <em>very differently</em> in terms of <span class="highlight">stability, safety, and reliability</span></li>
+        <li>An unsafe action in a real-world system can cause <strong>physical damage, injury, or catastrophic failure</strong></li>
+        <li>We need to understand <em>which algorithm is safer</em> before deploying RL in the real world</li>
+      </ul>
     </div>
+    <div>
+      <div class="key-finding">
+        <strong>Core Question:</strong> If we give PPO and SAC the <em>exact same</em> compute budget, environments, and evaluation protocol — which one produces policies that are safer to deploy on a physical robot?
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 4: RESEARCH QUESTIONS (1.5 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 4: GAP IN LITERATURE ==================== -->
 <section>
-    <h2>Research Questions</h2>
-
-    <div class="rq-box">
-        <div class="label">Primary Research Question</div>
-        <p style="margin:8px 0 0 0; font-size:1.05em;">
-            In which environmental conditions will PPO exhibit more stable and safer
-            behavior compared to SAC, during both <strong>training</strong> and <strong>deployment</strong>,
-            given matched compute budgets and evaluation protocols?
-        </p>
+  <h2>2. Gap in the Literature</h2>
+  <div class="two-col">
+    <div>
+      <p><strong>What prior work covers:</strong></p>
+      <ul>
+        <li>Cumulative reward comparisons [Schulman et al., 2017; Haarnoja et al., 2018]</li>
+        <li>Sample efficiency benchmarks [Henderson et al., 2018]</li>
+        <li>Implementation details for PPO/TRPO [Engstrom et al., 2020]</li>
+        <li>On-policy training best practices [Andrychowicz et al., 2021]</li>
+      </ul>
     </div>
-
-    <div class="rq-box" style="background:#2d2d4a;">
-        <div class="label">Secondary Research Question</div>
-        <p style="margin:8px 0 0 0;">
-            What are the <strong>algorithmic mechanisms</strong> that cause the observed differences
-            in stability and safety between PPO and SAC?
-        </p>
-        <p style="margin:8px 0 0 0; font-size:0.8em; color:#aaa;">
-            <strong>How we evaluate this:</strong> We track gradient norms, policy entropy evolution,
-            and Q-value variance to link behavioral differences to on-policy vs. off-policy mechanics.
-        </p>
+    <div>
+      <p><strong>What is missing:</strong></p>
+      <ul>
+        <li class="highlight">Training and deployment safety comparison</li>
+        <li class="highlight">Policy smoothness under matched conditions</li>
+        <li class="highlight">Constraint adherence in safety-critical envs</li>
+        <li class="highlight">Recovery from perturbations</li>
+        <li class="highlight">Risk sensitivity analysis</li>
+      </ul>
+      <div class="key-finding">
+        <strong>Our Contribution:</strong> A direct, reproducible safety comparison of PPO vs SAC using practical deployment metrics across both standard and constrained environments.
+      </div>
     </div>
-
-    <p class="small" style="margin-top:10px;">
-        <em>Evolution from proposal:</em> We removed the speculative "20% reduction" claim
-        and instead let empirical results speak. We also added measurable metrics for the secondary RQ.
-    </p>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 5: METHODOLOGY — ENVIRONMENTS (3.5 min, split into 2 slides)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 5: RESEARCH QUESTIONS ==================== -->
 <section>
-    <h2>Methodology — Environments & Setup</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Environment</th>
-                <th>Type</th>
-                <th>Purpose</th>
-                <th>Obs. Dim</th>
-                <th>Act. Dim</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Hopper-v4</strong></td>
-                <td>MuJoCo</td>
-                <td>Balance-critical locomotion; tests policy stability</td>
-                <td>11</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td><strong>HalfCheetah-v4</strong></td>
-                <td>MuJoCo</td>
-                <td>High-dimensional locomotion; tests convergence smoothness</td>
-                <td>17</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td><strong>SafetyPointGoal1-v0</strong></td>
-                <td>Safety-Gym</td>
-                <td>Explicit safety constraints; tests constraint adherence</td>
-                <td>60</td>
-                <td>2</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="two-col" style="margin-top:20px;">
-        <div>
-            <h3>Why these environments?</h3>
-            <ul>
-                <li><strong>Hopper:</strong> Unstable dynamics — policies must be smooth to avoid falling</li>
-                <li><strong>HalfCheetah:</strong> Standard benchmark for training convergence comparison</li>
-                <li><strong>SafetyPointGoal:</strong> Has explicit cost signals — enables direct safety measurement</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Setup</h3>
-            <ul>
-                <li><strong>Framework:</strong> Stable Baselines3 (PyTorch)</li>
-                <li><strong>Network:</strong> MLP 2×256 ReLU (both algorithms)</li>
-                <li><strong>PPO:</strong> 8 vectorized envs (SubprocVecEnv)</li>
-                <li><strong>SAC:</strong> 1 env (off-policy standard)</li>
-                <li><strong>Total Steps:</strong> 1M per condition</li>
-                <li><strong>No custom reward shaping</strong> — using env defaults</li>
-            </ul>
-        </div>
-    </div>
+  <h2>3. Research Questions</h2>
+  <div class="key-finding">
+    <p><strong>Primary RQ:</strong> In which environmental conditions will PPO have more stable and safer behavior compared to SAC for both training and deployment, when they both have the same compute budgets and evaluation protocols?</p>
+  </div>
+  <br>
+  <div class="key-finding">
+    <p><strong>Secondary RQ:</strong> What are the algorithmic mechanisms that cause the observed differences in stability and safety between PPO and SAC?</p>
+  </div>
+  <br>
+  <p class="small" style="color:#888;">We evaluate the secondary RQ through gradient norm analysis, Q-value variance tracking, and policy entropy evolution — linking behavioral differences to on-policy vs. off-policy mechanics.</p>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 6: METHODOLOGY — EXPERIMENTAL DESIGN
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 6: METHODOLOGY OVERVIEW ==================== -->
 <section>
-    <h2>Methodology — Experimental Design</h2>
-    <div class="two-col">
-        <div>
-            <h3>Hyperparameters</h3>
-            <table>
-                <thead>
-                    <tr><th>Parameter</th><th>Value</th><th>Justification</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Learning Rate</td><td>3×10⁻⁴</td><td>SB3 default, validated by Engstrom et al.</td></tr>
-                    <tr><td>Discount γ</td><td>0.99</td><td>Standard for continuous control</td></tr>
-                    <tr><td>Batch Size</td><td>256</td><td>Andrychowicz et al. (2021)</td></tr>
-                    <tr><td>PPO Clip Range</td><td>0.2</td><td>Original paper default</td></tr>
-                    <tr><td>SAC τ</td><td>0.005</td><td>Original paper default</td></tr>
-                </tbody>
-            </table>
-
-            <h3 style="margin-top:15px;">Controls</h3>
-            <ul>
-                <li><strong>Baseline:</strong> Random uniform policy per environment</li>
-                <li><strong>Matched budget:</strong> 1M interaction steps for both algorithms</li>
-                <li><strong>Identical evaluation protocol</strong> for fair comparison</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Seeds & Statistics</h3>
-            <div class="highlight-box green">
-                <strong>10 independent seeds</strong> per (algo × env) condition<br>
-                Report: mean ± standard error<br>
-                Visualization: all seed traces (faint) + bold mean curve
-            </div>
-
-            <h3 style="margin-top:15px;">Safety & Stability Metrics</h3>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <div class="metric-name">Action Smoothness</div>
-                    <div class="metric-desc">L2 norm of consecutive action diffs (lower = smoother)</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-name">Constraint Violations</div>
-                    <div class="metric-desc">Per-episode cost in Safety-Gym</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-name">Policy Entropy</div>
-                    <div class="metric-desc">Entropy of policy distribution</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-name">Recovery Ratio</div>
-                    <div class="metric-desc">Performance after state perturbation</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-name">Gradient Norms</div>
-                    <div class="metric-desc">Training stability indicator</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-name">Feasibility Rate</div>
-                    <div class="metric-desc">% episodes with zero violations</div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <h2>4. Experimental Methodology</h2>
+  <table>
+    <tr><th>Component</th><th>Details</th></tr>
+    <tr><td><strong>Algorithms</strong></td><td>PPO (on-policy) vs SAC (off-policy) via Stable-Baselines3</td></tr>
+    <tr><td><strong>Network</strong></td><td>MLP Policy &amp; Value: 2×256 ReLU</td></tr>
+    <tr><td><strong>Environments</strong></td><td>Hopper-v4, HalfCheetah-v4 (MuJoCo) + SafetyPointGoal1-v0 (Safety-Gym)</td></tr>
+    <tr><td><strong>Baseline</strong></td><td>Random policy (per environment)</td></tr>
+    <tr><td><strong>Budget</strong></td><td>1,000,000 env steps per run (matched)</td></tr>
+    <tr><td><strong>Seeds</strong></td><td>10 independent seeds per condition (60 total runs)</td></tr>
+    <tr><td><strong>Parallelization</strong></td><td>8× SubprocVecEnv (vectorized environments)</td></tr>
+    <tr><td><strong>Hardware</strong></td><td>2× NVIDIA RTX 3070 (8GB), 36 CPU cores</td></tr>
+    <tr><td><strong>HP Search</strong></td><td>LR ∈ {1e-4, 3e-4, 1e-3}, γ ∈ {0.99, 0.995}, BS ∈ {256, 1024}</td></tr>
+    <tr><td><strong>Evaluation</strong></td><td>100 deterministic episodes per seed</td></tr>
+  </table>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 7: RESULTS — LEARNING CURVES (4 min, split into 3-4 slides)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 7: METRICS ==================== -->
 <section>
-    <h2>Results — Learning Curves</h2>
-    <div class="two-col">
-        <div class="plot-container">
-            <img src="../plots/learning_curves_hopper_v4.png" alt="Hopper Learning Curves" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Hopper-v4 Learning Curves<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">Hopper-v4: Episodic Return vs Steps</p>
-        </div>
-        <div class="plot-container">
-            <img src="../plots/learning_curves_halfcheetah_v4.png" alt="HalfCheetah Learning Curves" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>HalfCheetah-v4 Learning Curves<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">HalfCheetah-v4: Episodic Return vs Steps</p>
-        </div>
-    </div>
-    <div class="highlight-box" style="margin-top:10px;">
-        <strong>Key Observation:</strong> Faint lines show individual seed traces; bold lines show mean.
-        Tighter spread = more stable training. PPO's clipped objective constrains update magnitude,
-        while SAC's entropy bonus encourages broader exploration early.
-    </div>
+  <h2>Safety &amp; Stability Metrics</h2>
+  <table>
+    <tr><th>Metric</th><th>What It Measures</th><th>Why It Matters for Safety</th></tr>
+    <tr><td><strong>Action Smoothness</strong></td><td>L2 norm of consecutive action differences</td><td>Jerky actions = mechanical wear on real robots</td></tr>
+    <tr><td><strong>Constraint Violations (Cost)</strong></td><td>Number of hazard boundary breaches</td><td>Direct measure of safety compliance</td></tr>
+    <tr><td><strong>Feasibility Rate</strong></td><td>% episodes with zero violations</td><td>Reliability of safe operation</td></tr>
+    <tr><td><strong>Recovery Ratio</strong></td><td>Performance after state perturbation</td><td>Robustness to unexpected disturbances</td></tr>
+    <tr><td><strong>Policy Entropy</strong></td><td>Randomness of action selection</td><td>Exploration vs. exploitation balance</td></tr>
+    <tr><td><strong>Q-Value Variance</strong> (SAC)</td><td>Uncertainty of value estimates</td><td>Confidence in decision making</td></tr>
+    <tr><td><strong>Gradient Norms</strong></td><td>Magnitude of parameter updates</td><td>Training stability indicator</td></tr>
+  </table>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 8: RESULTS — SAFETY METRICS
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 8: SUMMARY TABLE ==================== -->
 <section>
-    <h2>Results — Safety & Constraint Adherence</h2>
-    <div class="two-col">
-        <div class="plot-container">
-            <img src="../plots/constraints_safetypointgoal1_v0.png" alt="Constraint Violations" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>SafetyPointGoal1 Constraint Violations<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">SafetyPointGoal1-v0: Violations & Feasibility</p>
-        </div>
-        <div class="plot-container">
-            <img src="../plots/reward_safety_safetypointgoal1_v0.png" alt="Reward-Safety Tradeoff" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Reward-Safety Tradeoff<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">Reward vs Safety Tradeoff</p>
-        </div>
-    </div>
-    <div class="highlight-box sac">
-        <strong>Reward-Safety Tradeoff:</strong> Each dot is one episode across all seeds.
-        Stars mark the mean. The ideal operating point is upper-left (high return, low cost).
-    </div>
+  <h2>5. Results Overview</h2>
+  <img src="../plots/summary_table.png" alt="Summary Table">
+  <p class="small">Mean ± standard error across 10 seeds, evaluated over 100 deterministic episodes each.</p>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 9: RESULTS — ACTION SMOOTHNESS & STABILITY
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 9: HOPPER LEARNING CURVES ==================== -->
 <section>
-    <h2>Results — Action Smoothness & Training Stability</h2>
-    <div class="two-col">
-        <div class="plot-container">
-            <img src="../plots/action_smoothness_hopper_v4.png" alt="Action Smoothness" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Action Smoothness Comparison<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">Action Smoothness (lower = smoother policy)</p>
-        </div>
-        <div class="plot-container">
-            <img src="../plots/seed_variance_hopper_v4.png" alt="Seed Variance" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Seed Variance Comparison<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">Return Distribution Across Seeds</p>
-        </div>
-    </div>
-    <div class="highlight-box green">
-        <strong>Action Smoothness</strong> measures the L2 norm of consecutive action differences.
-        Smoother policies produce less jitter in actuator commands — critical for physical robots.
-    </div>
+  <h2>Hopper-v4 — Learning Curves</h2>
+  <img src="../plots/learning_curves_hopper_v4.png" alt="Hopper Learning Curves">
+  <div class="key-finding">
+    <strong>Finding:</strong> PPO (~2744) and SAC (~2762) achieve <em>nearly identical</em> final returns. Both algorithms have sufficient compute to solve this balance task. The key differences are in <em>how</em> they get there.
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 10: RESULTS — DEPLOYMENT ROBUSTNESS
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 10: HOPPER SMOOTHNESS ==================== -->
 <section>
-    <h2>Results — Deployment Robustness</h2>
-    <div class="two-col">
-        <div class="plot-container">
-            <img src="../plots/recovery_comparison.png" alt="Recovery" class="plot-img"
-                 onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Perturbation Recovery Comparison<br>(Plot will be generated after training completes)</div>'">
-            <p class="tiny">Recovery Ratio After State Perturbation (1.0 = perfect)</p>
-        </div>
-        <div>
-            <h3>Perturbation Protocol</h3>
-            <ol style="font-size:0.8em;">
-                <li>Run policy for 50 steps (measure baseline performance)</li>
-                <li>Inject Gaussian noise (σ=0.1) into state observation</li>
-                <li>Continue running and measure post-perturbation performance</li>
-                <li>Recovery ratio = post/pre mean reward</li>
-            </ol>
-
-            <div class="highlight-box" style="margin-top:15px;">
-                <strong>Why this matters:</strong> In deployment, sensor noise, 
-                environmental changes, and sim-to-real gaps introduce unexpected state perturbations.
-                A robust policy should recover quickly.
-            </div>
-        </div>
+  <h2>Hopper-v4 — Action Smoothness</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/action_smoothness_hopper_v4.png" alt="Hopper Smoothness">
     </div>
+    <div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="value good">0.129</div>
+          <div class="label">PPO Smoothness</div>
+        </div>
+        <div class="metric-card">
+          <div class="value highlight">0.397</div>
+          <div class="label">SAC Smoothness</div>
+        </div>
+      </div>
+      <br>
+      <div class="key-finding">
+        PPO's actions are <strong>3× smoother</strong> than SAC's. On a physical robot, SAC's jerky motor commands would cause severe mechanical wear. PPO's trust-region clipping naturally produces stable, deployment-safe control signals.
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 11: RESULTS — SUMMARY TABLE
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 11: HOPPER GRADIENT NORMS ==================== -->
 <section>
-    <h2>Results — Summary</h2>
-    <div class="plot-container">
-        <img src="../plots/summary_table.png" alt="Summary Table" class="plot-img"
-             onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Summary Table<br>(Will be generated after training completes)</div>'">
-    </div>
-    <p class="small" style="margin-top:8px;">All values: mean ± standard error across 10 seeds. Smoothness = lower is better. Recovery = closer to 1.0 is better.</p>
+  <h2>Hopper-v4 — Gradient Norm Evolution</h2>
+  <img src="../plots/gradient_norms_envsteps_hopper_v4.png" alt="Hopper Gradient Norms">
+  <div class="key-finding">
+    <strong>Algorithmic Insight:</strong> PPO's gradient norms are flat and stable (clipped trust region). SAC's gradients spike violently (up to 2500×), reflecting its aggressive entropy-maximizing exploration. This directly explains the smoothness gap.
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 12: ANALYSIS & INSIGHTS (2 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 12: HOPPER SEED VARIANCE ==================== -->
 <section>
-    <h2>Analysis & Insights</h2>
-    <div class="two-col">
-        <div>
-            <h3>🔑 Key Insight</h3>
-            <div class="highlight-box green">
-                The on-policy vs. off-policy distinction manifests most clearly
-                in <strong>training variance</strong> and <strong>action smoothness</strong>,
-                not just in final reward.
-            </div>
-
-            <h3 style="margin-top:15px;">Algorithmic Mechanisms</h3>
-            <ul>
-                <li><span class="ppo-text">PPO's clip</span> bounds the KL divergence between consecutive policies
-                    → smaller, more predictable updates</li>
-                <li><span class="sac-text">SAC's entropy bonus</span> encourages exploration
-                    → diverse but potentially less smooth actions</li>
-                <li>Off-policy replay introduces <strong>distribution shift</strong> between
-                    training data and current policy → higher gradient variance</li>
-            </ul>
-        </div>
-        <div>
-            <div class="plot-container">
-                <img src="../plots/gradient_norms_hopper_v4.png" alt="Gradient Norms" class="plot-img"
-                     onerror="this.parentElement.innerHTML='<div class=plot-placeholder>Gradient Norm Evolution<br>(Plot pending)</div>'">
-                <p class="tiny">Gradient Norms: PPO vs SAC</p>
-            </div>
-
-            <h3>Notable Observations</h3>
-            <ul>
-                <li>Environment <strong>dynamics complexity</strong> modulates the safety gap</li>
-                <li>Higher-dimensional action spaces may amplify smoothness differences</li>
-                <li>The safety-reward tradeoff is <strong>not symmetric</strong> between algorithms</li>
-            </ul>
-        </div>
+  <h2>Hopper-v4 — Seed Variance</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/seed_variance_hopper_v4.png" alt="Hopper Seed Variance">
     </div>
+    <div>
+      <div class="key-finding">
+        Both algorithms show consistent performance across all 10 seeds, confirming <strong>reproducibility</strong>. SAC has a slightly tighter interquartile range (±254 vs ±326), suggesting more deterministic convergence on this simple task.
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 13: LIMITATIONS & FUTURE WORK (1.5 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 13: HALFCHEETAH LEARNING CURVES ==================== -->
 <section>
-    <h2>Limitations & Future Work</h2>
-    <div class="two-col">
-        <div>
-            <h3>Limitations</h3>
-            <ul>
-                <li><strong>Environment scope:</strong> 3 environments — may not generalize to all continuous control tasks</li>
-                <li><strong>Single architecture:</strong> MLP 2×256; transformer or recurrent policies may behave differently</li>
-                <li><strong>No constrained RL:</strong> We don't modify algorithms to enforce constraints (e.g., CPO, PPO-Lagrangian)</li>
-                <li><strong>Perturbation model:</strong> Simple Gaussian noise; real-world perturbations are more structured</li>
-                <li><strong>Compute budget:</strong> 1M steps may be insufficient for some conditions to fully converge</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Future Work</h3>
-            <ul>
-                <li><strong>Constrained RL methods:</strong> Compare PPO-Lagrangian, CPO, WCSAC for explicit safety optimization</li>
-                <li><strong>Sim-to-real transfer:</strong> Test policy smoothness metrics on physical robots</li>
-                <li><strong>Domain randomization:</strong> How do perturbation recovery metrics change with training-time randomization?</li>
-                <li><strong>More environments:</strong> Walker2d, Ant, and higher-dimensional manipulation tasks</li>
-                <li><strong>Adaptive entropy tuning:</strong> Investigate SAC's auto-α impact on safety metrics</li>
-            </ul>
-        </div>
-    </div>
+  <h2>HalfCheetah-v4 — Learning Curves</h2>
+  <img src="../plots/learning_curves_halfcheetah_v4.png" alt="HalfCheetah Learning Curves">
+  <div class="key-finding">
+    <strong>Finding:</strong> SAC (~6270) <span class="highlight">dominates</span> PPO (~1138) by <strong>5.5×</strong>. In an environment where failure is impossible (the cheetah cannot fall over), SAC's aggressive exploration pays off massively.
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 14: CONCLUSION (1 min)
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 14: HALFCHEETAH REWARD HACKING ==================== -->
 <section>
-    <h2>Conclusion</h2>
-
-    <div class="rq-box" style="margin:20px 0;">
-        <div class="label">Research Question Revisited</div>
-        <p style="margin:8px 0 0 0;">
-            In which conditions will PPO have more stable and safer behavior compared to SAC?
-        </p>
+  <h2>HalfCheetah-v4 — The Reward Hacking Phenomenon</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/action_smoothness_halfcheetah_v4.png" alt="HalfCheetah Smoothness">
     </div>
-
-    <div class="highlight-box green" style="font-size:0.95em;">
-        <strong>Main Findings:</strong>
-        <ol>
-            <li>PPO shows <strong>lower training variance</strong> across seeds — more reproducible policies</li>
-            <li>PPO produces <strong>smoother actions</strong> — safer for physical deployment</li>
-            <li>SAC achieves competitive or higher rewards but with <strong>greater variability</strong></li>
-            <li>In safety-constrained environments, the <strong>reward-safety tradeoff differs</strong> between algorithms</li>
-            <li>Algorithmic mechanisms (clipping vs. entropy) directly explain the observed behavioral differences</li>
-        </ol>
+    <div>
+      <div class="warning-box">
+        <strong>⚠️ Reward Hacking Detected!</strong><br>
+        PPO's agent learned to run <em>completely upside down</em>, sliding on its head. Because PPO's trust region prevents risky policy changes, the agent got permanently trapped in this local optimum (~1100 reward).
+      </div>
+      <br>
+      <div class="key-finding">
+        SAC's entropy maximization forced it to keep trying chaotic movements, eventually discovering the superior upright running gait (~6270 reward). This is a <strong>textbook stability-exploration tradeoff</strong>.
+      </div>
     </div>
-
-    <div class="rq-box" style="background:#2d4a2d; margin-top:15px;">
-        <div class="label" style="color:#81c784;">Take-Away Message</div>
-        <p style="margin:8px 0 0 0; font-size:1.0em;">
-            When deploying RL in safety-critical applications, algorithm choice should be guided by
-            <strong>stability and safety metrics</strong> — not just cumulative reward.
-            PPO's conservative updates offer a natural advantage for deployment safety.
-        </p>
-    </div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════
-     SLIDE 15: REFERENCES
-     ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- ==================== SLIDE 15: HALFCHEETAH GRADIENT NORMS ==================== -->
 <section>
-    <h2>References</h2>
-    <div style="font-size:0.6em; line-height:1.6;">
-        <ol>
-            <li>J. Schulman et al., "Proximal Policy Optimization Algorithms," <em>arXiv:1707.06347</em>, 2017.</li>
-            <li>T. Haarnoja et al., "Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL with a Stochastic Actor," <em>ICML</em>, 2018.</li>
-            <li>P. Henderson et al., "Deep Reinforcement Learning That Matters," <em>AAAI</em>, 2018.</li>
-            <li>L. Engstrom et al., "Implementation Matters in Deep RL: A Case Study on PPO and TRPO," <em>ICLR</em>, 2020.</li>
-            <li>M. Andrychowicz et al., "What Matters in On-Policy Reinforcement Learning? A Large-Scale Empirical Study," <em>ICLR</em>, 2021.</li>
-            <li>R. Agarwal et al., "Deep Reinforcement Learning at the Edge of the Statistical Precipice," <em>NeurIPS</em>, 2021.</li>
-            <li>A. Ray et al., "Benchmarking Safe Exploration in Deep Reinforcement Learning," <em>Safety-Gym</em>, 2019.</li>
-        </ol>
-    </div>
-
-    <div style="text-align:center; margin-top:20px;">
-        <h3>Thank You!</h3>
-        <p class="small">
-            Code available at: <a href="#">github.com/team-repo</a><br>
-            Reproducible experiments with deterministic seeding
-        </p>
-    </div>
+  <h2>HalfCheetah-v4 — Gradient Norms</h2>
+  <img src="../plots/gradient_norms_envsteps_halfcheetah_v4.png" alt="HalfCheetah Gradient Norms">
+  <div class="key-finding">
+    SAC's Q-value variance on HalfCheetah is <strong>3.44</strong> (vs 0.27 on Hopper — a 13× increase), showing the critic network is far less certain, yet this uncertainty drives better exploration and higher performance.
+  </div>
 </section>
 
-</div><!-- /slides -->
-</div><!-- /reveal -->
+<!-- ==================== SLIDE 16: HALFCHEETAH SEED VARIANCE ==================== -->
+<section>
+  <h2>HalfCheetah-v4 — Seed Variance</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/seed_variance_halfcheetah_v4.png" alt="HalfCheetah Seed Variance">
+    </div>
+    <div>
+      <div class="key-finding">
+        PPO shows remarkably <strong>low variance</strong> (±55) because all 10 seeds converged to the same local optimum (upside-down sliding). SAC has higher variance (±176) reflecting different exploration paths, but consistently achieves the superior upright gait.
+      </div>
+    </div>
+  </div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<!-- ==================== SLIDE 17: SAFETY LEARNING CURVES ==================== -->
+<section>
+  <h2>6. SafetyPointGoal1-v0 — Learning Curves</h2>
+  <img src="../plots/learning_curves_safetypointgoal1_v0.png" alt="Safety Learning Curves">
+  <div class="key-finding">
+    Both PPO and SAC achieve identical returns (~27.0) on the navigation task. The <em>real differentiation</em> is in constraint violations, not reward.
+  </div>
+</section>
+
+<!-- ==================== SLIDE 18: SAFETY CONSTRAINT VIOLATIONS ==================== -->
+<section>
+  <h2>SafetyPointGoal1-v0 — Constraint Violations</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/constraints_safetypointgoal1_v0.png" alt="Safety Constraints">
+    </div>
+    <div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="value highlight">54.6</div>
+          <div class="label">PPO Mean Cost</div>
+        </div>
+        <div class="metric-card">
+          <div class="value good">50.3</div>
+          <div class="label">SAC Mean Cost</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">8%</div>
+          <div class="label">PPO Feasibility</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">9%</div>
+          <div class="label">SAC Feasibility</div>
+        </div>
+      </div>
+      <br>
+      <div class="key-finding">
+        <strong>Surprise Finding:</strong> SAC achieves <strong>~8% fewer violations</strong> than PPO. SAC's replay buffer allows it to memorize hazard locations from past experiences, leading to safer trajectories.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 19: SAFETY REWARD-TRADEOFF ==================== -->
+<section>
+  <h2>SafetyPointGoal1-v0 — Reward-Safety Tradeoff</h2>
+  <img src="../plots/reward_safety_safetypointgoal1_v0.png" alt="Reward-Safety Tradeoff">
+  <div class="key-finding">
+    The scatter plot reveals that <strong>neither algorithm successfully learned to avoid hazards while maximizing reward</strong>. Both cluster in the high-cost region, highlighting the fundamental difficulty of safety-constrained RL without explicit cost penalties in the reward function.
+  </div>
+</section>
+
+<!-- ==================== SLIDE 20: SAFETY SMOOTHNESS ==================== -->
+<section>
+  <h2>SafetyPointGoal1-v0 — Action Smoothness</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/action_smoothness_safetypointgoal1_v0.png" alt="Safety Smoothness">
+    </div>
+    <div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="value">0.256</div>
+          <div class="label">PPO Smoothness</div>
+        </div>
+        <div class="metric-card">
+          <div class="value good">0.135</div>
+          <div class="label">SAC Smoothness</div>
+        </div>
+      </div>
+      <br>
+      <div class="key-finding">
+        Interestingly, SAC produces <strong>smoother actions</strong> on the Safety env (0.135 vs 0.256). Unlike MuJoCo tasks, the navigation task rewards precise, smooth movements toward the goal — and SAC's replay buffer helps it refine these movements over time.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 21: SAFETY GRADIENT NORMS ==================== -->
+<section>
+  <h2>SafetyPointGoal1-v0 — Gradient Norms</h2>
+  <img src="../plots/gradient_norms_envsteps_safetypointgoal1_v0.png" alt="Safety Gradient Norms">
+  <div class="key-finding">
+    Both algorithms show relatively stable gradient norms on this simpler navigation task, but SAC's occasional spikes correlate with episodes where the agent encounters novel hazard configurations.
+  </div>
+</section>
+
+<!-- ==================== SLIDE 22: RECOVERY COMPARISON ==================== -->
+<section>
+  <h2>Recovery from Perturbations</h2>
+  <div class="two-col">
+    <div>
+      <img src="../plots/recovery_comparison.png" alt="Recovery Comparison">
+    </div>
+    <div>
+      <div class="key-finding">
+        <strong>Recovery Ratio &gt; 1.0</strong> means the agent performed <em>better</em> after perturbation. All conditions show ratios above 1.0, indicating both algorithms are robust to unexpected state disturbances — a positive signal for real-world deployment.
+      </div>
+      <table>
+        <tr><th>Environment</th><th>PPO</th><th>SAC</th></tr>
+        <tr><td>Hopper-v4</td><td>1.96</td><td>1.94</td></tr>
+        <tr><td>HalfCheetah-v4</td><td>2.34</td><td>2.30</td></tr>
+        <tr><td>SafetyPointGoal1</td><td>1.83</td><td>1.67</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 23: SAMPLE EFFICIENCY ==================== -->
+<section>
+  <h2>Sample Efficiency</h2>
+  <img src="../plots/sample_efficiency.png" alt="Sample Efficiency">
+  <div class="key-finding">
+    SAC demonstrates superior sample efficiency on HalfCheetah, reaching performance thresholds significantly faster due to its replay buffer enabling data reuse. On Hopper, both algorithms converge at similar rates.
+  </div>
+</section>
+
+<!-- ==================== SLIDE 24: VIDEO ANALYSIS ==================== -->
+<section>
+  <h2>7. Qualitative Video Analysis</h2>
+  <table>
+    <tr><th>Video</th><th>Observed Behavior</th><th>Metric Correlation</th></tr>
+    <tr>
+      <td><strong>hopper-v4_ppo.mp4</strong></td>
+      <td>Stable, repetitive, cautious hopping rhythm</td>
+      <td class="good">Smoothness: 0.129 ✓</td>
+    </tr>
+    <tr>
+      <td><strong>hopper-v4_sac.mp4</strong></td>
+      <td>Wild, explosive micro-adjustments in leg actuators</td>
+      <td class="highlight">Smoothness: 0.397 ✗</td>
+    </tr>
+    <tr>
+      <td><strong>halfcheetah-v4_ppo.mp4</strong></td>
+      <td class="highlight">Running completely upside down (reward hacking!)</td>
+      <td>Return: 1138 (local optimum)</td>
+    </tr>
+    <tr>
+      <td><strong>halfcheetah-v4_sac.mp4</strong></td>
+      <td class="good">Upright, fast sprinting gait</td>
+      <td>Return: 6270 (global optimum)</td>
+    </tr>
+    <tr>
+      <td><strong>safety_ppo.mp4</strong></td>
+      <td>Navigates toward goal, clips hazard boundaries frequently</td>
+      <td>Cost: 54.6 violations</td>
+    </tr>
+    <tr>
+      <td><strong>safety_sac.mp4</strong></td>
+      <td>Navigates toward goal, course-corrects faster near hazards</td>
+      <td class="good">Cost: 50.3 violations</td>
+    </tr>
+  </table>
+  <p class="small"><em>All videos rendered at 30 fps using headless EGL GPU rendering on RTX 3070.</em></p>
+</section>
+
+<!-- ==================== SLIDE 25: DISCUSSION ==================== -->
+<section>
+  <h2>8. Discussion — Answering the Research Questions</h2>
+  <div class="key-finding">
+    <p><strong>Primary RQ — When is PPO safer?</strong></p>
+    <p>PPO is safer in <strong>physics-based balance tasks</strong> (Hopper) where its trust-region clipping produces 3× smoother actions. However, this same conservatism can trap PPO in local optima (upside-down HalfCheetah), and in constrained navigation tasks, SAC actually achieves fewer violations.</p>
+  </div>
+  <br>
+  <div class="key-finding">
+    <p><strong>Secondary RQ — What mechanisms cause the differences?</strong></p>
+    <ul style="font-size:0.6em;">
+      <li><strong>PPO's clipped surrogate objective</strong> → stable gradients → smooth actions → but risk of local optima entrapment</li>
+      <li><strong>SAC's entropy maximization</strong> → volatile gradients → jerky actions → but escapes local optima</li>
+      <li><strong>SAC's replay buffer</strong> → data reuse → faster learning of spatial constraints → fewer safety violations</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 26: KEY TAKEAWAY ==================== -->
+<section>
+  <h2>The Core Insight</h2>
+  <div class="warning-box" style="font-size:0.75em; text-align:center;">
+    <strong>There is no universally "safer" algorithm.</strong><br><br>
+    <strong>PPO</strong> excels at <em>deployment safety</em> (smooth, predictable actions)<br>
+    <strong>SAC</strong> excels at <em>constraint compliance</em> (fewer boundary violations)<br><br>
+    The choice depends on <strong>what kind of safety matters most</strong> in your application.
+  </div>
+  <br>
+  <table>
+    <tr><th>Safety Dimension</th><th>Winner</th><th>Evidence</th></tr>
+    <tr><td>Action Smoothness (Hopper)</td><td class="good">PPO</td><td>3× smoother (0.129 vs 0.397)</td></tr>
+    <tr><td>Exploration Robustness</td><td class="good">SAC</td><td>Avoids local optima (6270 vs 1138)</td></tr>
+    <tr><td>Constraint Violations</td><td class="good">SAC</td><td>8% fewer violations (50.3 vs 54.6)</td></tr>
+    <tr><td>Gradient Stability</td><td class="good">PPO</td><td>Flat norms vs SAC's violent spikes</td></tr>
+    <tr><td>Recovery from Perturbation</td><td>Tie</td><td>Both &gt; 1.0 across all envs</td></tr>
+  </table>
+</section>
+
+<!-- ==================== SLIDE 27: LIMITATIONS ==================== -->
+<section>
+  <h2>9. Limitations &amp; Future Work</h2>
+  <div class="two-col">
+    <div>
+      <h3>Limitations</h3>
+      <ul>
+        <li>Only one safety environment tested (SafetyPointGoal1-v0)</li>
+        <li>Standard SB3 implementations — no custom safety-aware modifications (e.g., CPO, FOCOPS)</li>
+        <li>Fixed 1M step budget — longer training may change conclusions</li>
+        <li>MLP architecture only — no CNN/attention networks</li>
+        <li>No real-world hardware validation (sim-only)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Future Work</h3>
+      <ul>
+        <li>Add constrained RL algorithms (CPO, FOCOPS, SafePPO)</li>
+        <li>Test on more Safety-Gym environments (SafetyCarGoal, SafetyDoggoGoal)</li>
+        <li>Increase compute budget to 5–10M steps</li>
+        <li>Sim-to-real transfer on physical robot</li>
+        <li>Implement Lagrangian reward shaping for explicit cost minimization</li>
+        <li>Investigate reward hacking mitigation strategies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 28: CONCLUSION ==================== -->
+<section>
+  <h2>10. Conclusion</h2>
+  <ul>
+    <li>We performed a <strong>rigorous, reproducible safety comparison</strong> of PPO vs SAC across 3 environments, 10 seeds each, with 7 custom safety metrics</li>
+    <li>PPO produces <strong>3× smoother actions</strong> — critical for robotic deployment</li>
+    <li>SAC achieves <strong>5.5× higher performance</strong> in unconstrained environments</li>
+    <li>SAC shows <strong>fewer constraint violations</strong> in safety-critical environments thanks to its replay buffer</li>
+    <li>We discovered a <strong>reward hacking phenomenon</strong> in PPO (HalfCheetah) — a direct consequence of over-conservative trust-region optimization</li>
+    <li><strong>Recommendation:</strong> Use PPO when actuator wear matters; use SAC when constraint compliance matters</li>
+  </ul>
+  <br>
+  <div class="key-finding" style="text-align:center;">
+    <strong>Code &amp; Data:</strong> <a href="https://github.com/patelharsh15/Training-and-Deployment-Safety-in-On-Policy-and-Off-Policy-RL">github.com/patelharsh15/Training-and-Deployment-Safety-in-On-Policy-and-Off-Policy-RL</a>
+  </div>
+</section>
+
+<!-- ==================== SLIDE 29: REFERENCES ==================== -->
+<section>
+  <h2>References</h2>
+  <ul class="small">
+    <li>[1] Schulman et al., "Proximal Policy Optimization Algorithms," <em>arXiv:1707.06347</em>, 2017.</li>
+    <li>[2] Haarnoja et al., "Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL with a Stochastic Actor," <em>ICML</em>, 2018.</li>
+    <li>[3] Henderson et al., "Deep Reinforcement Learning That Matters," <em>AAAI</em>, 2018.</li>
+    <li>[4] Engstrom et al., "Implementation Matters in Deep RL: A Case Study on PPO and TRPO," <em>ICLR</em>, 2020.</li>
+    <li>[5] Andrychowicz et al., "What Matters in On-Policy Reinforcement Learning? A Large-Scale Empirical Study," <em>ICLR</em>, 2021.</li>
+    <li>[6] Ray et al., "Benchmarking Safe Exploration in Deep Reinforcement Learning," <em>OpenAI Technical Report</em>, 2019.</li>
+    <li>[7] Ji et al., "Safety-Gymnasium: A Unified Safe Reinforcement Learning Benchmark," <em>NeurIPS Datasets and Benchmarks Track</em>, 2023.</li>
+    <li>[8] Achiam et al., "Constrained Policy Optimization," <em>ICML</em>, 2017.</li>
+  </ul>
+</section>
+
+<!-- ==================== SLIDE 30: Q&A ==================== -->
+<section>
+  <h1>Thank You!</h1>
+  <h2>Questions?</h2>
+  <br>
+  <p>
+    <strong>Farina Salman</strong> · <strong>Rachna Sunilkumar Deshpande</strong><br>
+    <strong>Abdulaziz Al-Tayar</strong> · <strong>Harsh Patel</strong>
+  </p>
+  <p style="color:#888;">University of Ottawa — CSI 5180 / CEG 5270</p>
+  <br>
+  <div class="key-finding" style="text-align:center;">
+    <strong>GitHub:</strong> <a href="https://github.com/patelharsh15/Training-and-Deployment-Safety-in-On-Policy-and-Off-Policy-RL">Full Codebase &amp; Results</a>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
 <script>
-    Reveal.initialize({
-        hash: true,
-        slideNumber: 'c/t',
-        width: 1200,
-        height: 700,
-        margin: 0.04,
-        transition: 'slide',
-        transitionSpeed: 'default',
-        center: false,
-    });
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    width: 1200,
+    height: 700,
+    margin: 0.04,
+    transition: 'slide',
+    transitionSpeed: 'default',
+    controlsTutorial: false,
+    progress: true,
+    center: true
+  });
 </script>
 </body>
 </html>

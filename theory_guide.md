@@ -16,7 +16,8 @@ We are testing them on **Standard environments** (MuJoCo Hopper/Cheetah, where t
 ---
 
 ## 2. The Core Theory: On-Policy vs Off-Policy
-
+PPO because it studies past memories.
+Safety/Violations: PPO will likely commit far fewer safety violations. SAC's
 The fundamental difference between PPO and SAC is *how they treat their memories*.
 
 ### PPO: On-Policy (The "Live in the Moment" Learner)

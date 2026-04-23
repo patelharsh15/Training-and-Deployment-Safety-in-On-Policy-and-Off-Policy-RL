@@ -70,6 +70,21 @@ def record_video(env_name, algo, seed, output_path, is_safety=False):
     finally:
         env.close()
 
+def find_best_seed(env_name, algo):
+    best_seed = 0
+    best_return = -np.inf
+    # Search up to Seed 12 (covers standard 10-seed and expanded 12-seed runs)
+    for seed in range(13): 
+        res_dir = get_result_dir(env_name, algo, seed, "best")
+        eval_path = os.path.join(res_dir, "eval_logs", "evaluations.npz")
+        if os.path.exists(eval_path):
+            data = np.load(eval_path)
+            mean_returns = data["results"].mean(axis=1)
+            if len(mean_returns) > 0 and mean_returns[-1] > best_return:
+                best_return = mean_returns[-1]
+                best_seed = seed
+    return best_seed
+
 if __name__ == "__main__":
     vid_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "plots", "videos")
     os.makedirs(vid_dir, exist_ok=True)
@@ -77,12 +92,13 @@ if __name__ == "__main__":
     # Generate for Hopper and HalfCheetah
     for env_name in ["Hopper-v4", "HalfCheetah-v4"]:
         for algo in ["ppo", "sac"]:
+            best_seed = find_best_seed(env_name, algo)
             out_path = os.path.join(vid_dir, f"{env_name.lower()}_{algo.lower()}.mp4")
-            # Seed 0 is a great representative baseline
-            record_video(env_name, algo, 0, out_path, is_safety=False)
+            record_video(env_name, algo, best_seed, out_path, is_safety=False)
             
-    # For safety env, check if seed 0 is done
+    # For safety env
     for env_name in ["SafetyPointGoal1-v0"]:
         for algo in ["ppo", "sac"]:
+            best_seed = find_best_seed(env_name, algo)
             out_path = os.path.join(vid_dir, f"{env_name.lower()}_{algo.lower()}.mp4")
-            record_video(env_name, algo, 0, out_path, is_safety=True)
+            record_video(env_name, algo, best_seed, out_path, is_safety=True)

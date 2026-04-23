@@ -13,3 +13,183 @@ Processing Seed 0 out of 11...
 2026-04-22 22:32:10,997 [INFO] Starting training...
 /home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x78132179a650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x78143561b820>
   warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-22 23:03:20,961 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0/logs/training_metrics.json
+2026-04-22 23:03:20,979 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
+Seed 0 complete!
+=========================================================
+Processing Seed 1 out of 11...
+=========================================================
+2026-04-22 23:03:23,839 [INFO] ============================================================
+2026-04-22 23:03:23,839 [INFO] Training PPO on HalfCheetah-v4 | Seed 1
+2026-04-22 23:03:23,839 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-22 23:03:23,839 [INFO] Total timesteps: 1000000
+2026-04-22 23:03:23,839 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_1
+2026-04-22 23:03:23,839 [INFO] ============================================================
+2026-04-22 23:03:23,890 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-22 23:03:26,600 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7b56e5c8e650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7b57f9b17820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-22 23:34:32,373 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_1/logs/training_metrics.json
+2026-04-22 23:34:32,391 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_1
+Seed 1 complete!
+=========================================================
+Processing Seed 2 out of 11...
+=========================================================
+2026-04-22 23:34:34,782 [INFO] ============================================================
+2026-04-22 23:34:34,782 [INFO] Training PPO on HalfCheetah-v4 | Seed 2
+2026-04-22 23:34:34,782 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-22 23:34:34,782 [INFO] Total timesteps: 1000000
+2026-04-22 23:34:34,782 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_2
+2026-04-22 23:34:34,782 [INFO] ============================================================
+2026-04-22 23:34:34,847 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-22 23:34:37,530 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x77b61a296650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x77b72e01b820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 00:05:54,257 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_2/logs/training_metrics.json
+2026-04-23 00:05:54,275 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_2
+Seed 2 complete!
+=========================================================
+Processing Seed 3 out of 11...
+=========================================================
+2026-04-23 00:05:56,766 [INFO] ============================================================
+2026-04-23 00:05:56,766 [INFO] Training PPO on HalfCheetah-v4 | Seed 3
+2026-04-23 00:05:56,766 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 00:05:56,766 [INFO] Total timesteps: 1000000
+2026-04-23 00:05:56,766 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3
+2026-04-23 00:05:56,766 [INFO] ============================================================
+2026-04-23 00:05:56,831 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 00:05:59,488 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7249a1b7e650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x724ab5517820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 00:37:30,089 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3/logs/training_metrics.json
+2026-04-23 00:37:30,107 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_3
+Seed 3 complete!
+=========================================================
+Processing Seed 4 out of 11...
+=========================================================
+2026-04-23 00:37:32,547 [INFO] ============================================================
+2026-04-23 00:37:32,547 [INFO] Training PPO on HalfCheetah-v4 | Seed 4
+2026-04-23 00:37:32,547 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 00:37:32,547 [INFO] Total timesteps: 1000000
+2026-04-23 00:37:32,547 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_4
+2026-04-23 00:37:32,547 [INFO] ============================================================
+2026-04-23 00:37:32,614 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 00:37:35,313 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x76bd1959a650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x76be2d41b820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 01:09:09,977 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_4/logs/training_metrics.json
+2026-04-23 01:09:09,995 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_4
+Seed 4 complete!
+=========================================================
+Processing Seed 5 out of 11...
+=========================================================
+2026-04-23 01:09:12,417 [INFO] ============================================================
+2026-04-23 01:09:12,417 [INFO] Training PPO on HalfCheetah-v4 | Seed 5
+2026-04-23 01:09:12,417 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 01:09:12,417 [INFO] Total timesteps: 1000000
+2026-04-23 01:09:12,417 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_5
+2026-04-23 01:09:12,417 [INFO] ============================================================
+2026-04-23 01:09:12,484 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 01:09:15,163 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7cbfc3886650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7cc0d7417820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 01:40:22,778 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_5/logs/training_metrics.json
+2026-04-23 01:40:22,796 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_5
+Seed 5 complete!
+=========================================================
+Processing Seed 6 out of 11...
+=========================================================
+2026-04-23 01:40:25,228 [INFO] ============================================================
+2026-04-23 01:40:25,228 [INFO] Training PPO on HalfCheetah-v4 | Seed 6
+2026-04-23 01:40:25,229 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 01:40:25,229 [INFO] Total timesteps: 1000000
+2026-04-23 01:40:25,229 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_6
+2026-04-23 01:40:25,229 [INFO] ============================================================
+2026-04-23 01:40:25,280 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 01:40:27,976 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7f5f2cf86650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7f6040b17820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 02:11:55,144 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_6/logs/training_metrics.json
+2026-04-23 02:11:55,163 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_6
+Seed 6 complete!
+=========================================================
+Processing Seed 7 out of 11...
+=========================================================
+2026-04-23 02:11:57,590 [INFO] ============================================================
+2026-04-23 02:11:57,590 [INFO] Training PPO on HalfCheetah-v4 | Seed 7
+2026-04-23 02:11:57,591 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 02:11:57,591 [INFO] Total timesteps: 1000000
+2026-04-23 02:11:57,591 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_7
+2026-04-23 02:11:57,591 [INFO] ============================================================
+2026-04-23 02:11:57,657 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 02:12:00,370 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7c0de1796650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7c0ef561b820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 02:43:08,119 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_7/logs/training_metrics.json
+2026-04-23 02:43:08,137 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_7
+Seed 7 complete!
+=========================================================
+Processing Seed 8 out of 11...
+=========================================================
+2026-04-23 02:43:10,562 [INFO] ============================================================
+2026-04-23 02:43:10,562 [INFO] Training PPO on HalfCheetah-v4 | Seed 8
+2026-04-23 02:43:10,562 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 02:43:10,562 [INFO] Total timesteps: 1000000
+2026-04-23 02:43:10,562 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_8
+2026-04-23 02:43:10,562 [INFO] ============================================================
+2026-04-23 02:43:10,627 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 02:43:13,263 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7a47bde92650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7a48d1d17820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 03:14:06,435 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_8/logs/training_metrics.json
+2026-04-23 03:14:06,453 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_8
+Seed 8 complete!
+=========================================================
+Processing Seed 9 out of 11...
+=========================================================
+2026-04-23 03:14:08,906 [INFO] ============================================================
+2026-04-23 03:14:08,906 [INFO] Training PPO on HalfCheetah-v4 | Seed 9
+2026-04-23 03:14:08,906 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 03:14:08,906 [INFO] Total timesteps: 1000000
+2026-04-23 03:14:08,906 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_9
+2026-04-23 03:14:08,906 [INFO] ============================================================
+2026-04-23 03:14:08,976 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 03:14:11,614 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x717d30692650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x717e44317820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 03:45:22,987 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_9/logs/training_metrics.json
+2026-04-23 03:45:23,006 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_9
+Seed 9 complete!
+=========================================================
+Processing Seed 10 out of 11...
+=========================================================
+2026-04-23 03:45:25,406 [INFO] ============================================================
+2026-04-23 03:45:25,406 [INFO] Training PPO on HalfCheetah-v4 | Seed 10
+2026-04-23 03:45:25,406 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 03:45:25,406 [INFO] Total timesteps: 1000000
+2026-04-23 03:45:25,406 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_10
+2026-04-23 03:45:25,406 [INFO] ============================================================
+2026-04-23 03:45:25,458 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 03:45:28,139 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7715b2686650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7716c6117820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 04:16:46,615 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_10/logs/training_metrics.json
+2026-04-23 04:16:46,634 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_10
+Seed 10 complete!
+=========================================================
+Processing Seed 11 out of 11...
+=========================================================
+2026-04-23 04:16:49,073 [INFO] ============================================================
+2026-04-23 04:16:49,074 [INFO] Training PPO on HalfCheetah-v4 | Seed 11
+2026-04-23 04:16:49,074 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-23 04:16:49,074 [INFO] Total timesteps: 1000000
+2026-04-23 04:16:49,074 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_11
+2026-04-23 04:16:49,074 [INFO] ============================================================
+2026-04-23 04:16:49,140 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-23 04:16:51,774 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x7d2646c8a650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x7d275a817820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")
+2026-04-23 04:48:10,597 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_11/logs/training_metrics.json
+2026-04-23 04:48:10,614 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_11
+Seed 11 complete!
+OVERNIGHT SCRIPT FULLY COMPLETED!

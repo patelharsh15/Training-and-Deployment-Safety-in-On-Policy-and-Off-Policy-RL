@@ -1,0 +1,15 @@
+nohup: ignoring input
+Starting massive 12-seed overnight run for HalfCheetah PPO...
+=========================================================
+Processing Seed 0 out of 11...
+=========================================================
+2026-04-22 22:32:08,227 [INFO] ============================================================
+2026-04-22 22:32:08,227 [INFO] Training PPO on HalfCheetah-v4 | Seed 0
+2026-04-22 22:32:08,227 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-22 22:32:08,227 [INFO] Total timesteps: 1000000
+2026-04-22 22:32:08,227 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
+2026-04-22 22:32:08,227 [INFO] ============================================================
+2026-04-22 22:32:08,295 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-22 22:32:10,997 [INFO] Starting training...
+/home/harshp/Downloads/rl_drl_assignment/venv/lib/python3.10/site-packages/stable_baselines3/common/callbacks.py:414: UserWarning: Training and eval env are not of the same type<stable_baselines3.common.vec_env.subproc_vec_env.SubprocVecEnv object at 0x78132179a650> != <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x78143561b820>
+  warnings.warn("Training and eval env are not of the same type" f"{self.training_env} != {self.eval_env}")

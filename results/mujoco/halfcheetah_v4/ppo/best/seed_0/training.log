@@ -1,10 +1,16 @@
-2026-03-30 14:42:42,465 [INFO] ============================================================
-2026-03-30 14:42:42,465 [INFO] Training PPO on HalfCheetah-v4 | Seed 0
-2026-03-30 14:42:42,465 [INFO] LR=0.0003, γ=0.99, BS=256
-2026-03-30 14:42:42,465 [INFO] Total timesteps: 1000000
-2026-03-30 14:42:42,465 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
-2026-03-30 14:42:42,465 [INFO] ============================================================
-2026-03-30 14:42:42,535 [INFO] Using GPU: NVIDIA GeForce RTX 3070
-2026-03-30 14:42:46,072 [INFO] Starting training...
-2026-03-30 15:14:03,397 [INFO] Saved training metrics to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0/logs/training_metrics.json
-2026-03-30 15:14:03,415 [INFO] Training complete. Model saved to /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
+2026-04-22 22:31:04,806 [INFO] ============================================================
+2026-04-22 22:31:04,806 [INFO] Training PPO on HalfCheetah-v4 | Seed 0
+2026-04-22 22:31:04,806 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-22 22:31:04,806 [INFO] Total timesteps: 1000000
+2026-04-22 22:31:04,806 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
+2026-04-22 22:31:04,806 [INFO] ============================================================
+2026-04-22 22:31:04,877 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-22 22:31:07,582 [INFO] Starting training...
+2026-04-22 22:32:08,227 [INFO] ============================================================
+2026-04-22 22:32:08,227 [INFO] Training PPO on HalfCheetah-v4 | Seed 0
+2026-04-22 22:32:08,227 [INFO] LR=0.0003, γ=0.99, BS=256
+2026-04-22 22:32:08,227 [INFO] Total timesteps: 1000000
+2026-04-22 22:32:08,227 [INFO] Result dir: /home/harshp/Downloads/rl_drl_assignment/results/mujoco/halfcheetah_v4/ppo/best/seed_0
+2026-04-22 22:32:08,227 [INFO] ============================================================
+2026-04-22 22:32:08,295 [INFO] Using GPU: NVIDIA GeForce RTX 3070
+2026-04-22 22:32:10,997 [INFO] Starting training...
